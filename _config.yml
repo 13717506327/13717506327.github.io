@@ -79,8 +79,10 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:13717506327/13717506327.github.io.git
-  branch: master
+  repo:
+    github: git@github.com:13717506327/13717506327.github.io.git,master
+    coding: https://git.coding.net/aifragment/aifragment.coding.me.git,master
+  
 
 search:
   path: search.xml
@@ -90,4 +92,11 @@ search:
 
 local_search:
   enable: true
+
+passage_end_tag:
+  enabled: true
+
+auto_category:
+ enable: true
+ depth: 1
 
