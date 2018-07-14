@@ -215,9 +215,7 @@
 
           {% if not is_index and theme.busuanzi_count.enable and theme.busuanzi_count.page_pv %}
             <span class="post-meta-divider">|</span>
-            <span class="page-pv">{{ theme.busuanzi_count.page_pv_header }}
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>{{ theme.busuanzi_count.page_pv_footer }}
-            </span>
+            <span class="page-pv">{{ theme.busuanzi_count.page_pv_header }}<span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>{{ theme.busuanzi_count.page_pv_footer }}</span>
           {% endif %}
 
           {% if theme.post_wordcount.wordcount or theme.post_wordcount.min2read %}
@@ -233,7 +231,7 @@
                   <span class="post-meta-item-text">{{ __('post.wordcount') }}&#58;</span>
                 {% endif %}
                 <span title="{{ __('post.wordcount') }}">
-                  {{ wordcount(post.content) }}
+                  {{ wordcount(post.content) }} 字
                 </span>
               {% endif %}
 
@@ -249,7 +247,7 @@
                   <span class="post-meta-item-text">{{ __('post.min2read') }} &asymp;</span>
                 {% endif %}
                 <span title="{{ __('post.min2read') }}">
-                  {{ min2read(post.content) }}
+                  {{ min2read(post.content) }} 分钟
                 </span>
               {% endif %}
             </div>
@@ -352,6 +350,11 @@
       </div>
     {% endif %}
     
+    <div>
+      {% if not is_index %}
+        {% include 'passage-end-tag.swig' %}
+      {% endif %}
+    </div>
 
     <footer class="post-footer">
       {% if post.tags and post.tags.length and not is_index %}

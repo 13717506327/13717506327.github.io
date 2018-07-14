@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: json lee
+title: json`s blog
 subtitle:
 description: just do it
 keywords:
@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://jsonlee.top/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -74,6 +74,7 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
+## theme: even
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -92,9 +93,6 @@ search:
 
 local_search:
   enable: true
-
-passage_end_tag:
-  enabled: true
 
 auto_category:
  enable: true
