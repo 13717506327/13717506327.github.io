@@ -1892,7 +1892,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #af0eff;
+  background: #9aff25;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2424,13 +2424,6 @@ pre .javascript .function {
 .site-pv .busuanzi-value,
 .page-pv .busuanzi-value {
   margin: 0 5px;
-}
-.site-uv {
-  margin-right: 10px;
-}
-.site-uv::after {
-  content: "|";
-  padding-left: 10px;
 }
 .page-archive .archive-page-counter {
   position: relative;
@@ -2978,4 +2971,47 @@ hr {
 .main-inner,
 .footer-inner {
   width: 85%;
+}
+.header-inner,
+.main-inner,
+.footer-inner {
+  width: 85%;
+}
+.logo-line-before,
+.logo-line-after {
+  display: none;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+}
+.site-title {
+  font-family: 'Segoe Script', 'Segoe Print', 'Freestyle Script', 'Ink Free';
+  font-size: 36px !important;
+}
+.menu-item-active a {
+  color: #007fff;
+}
+.menu .menu-item a {
+  font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+  font-size: 14px;
+}
+.menu .menu-item a:hover {
+  color: #800080;
+}
+.posts-expand .post-title-link::before {
+  background-color: #c05b4d;
+}
+.post-button a {
+  color: #c05b4d;
+  border: none;
+}
+.post-button a:hover {
+  color: #c05b4d;
+  text-decoration: underline;
 }

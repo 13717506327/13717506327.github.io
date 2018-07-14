@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[function]]></title>
+    <url>%2F2018%2F07%2F15%2Ffunction%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>js原生</category>
+      </categories>
+      <tags>
+        <tag>js原生</tag>
+        <tag>function</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[testMyBlog]]></title>
     <url>%2F2018%2F07%2F13%2FtestMyBlog%2F</url>
-    <content type="text"><![CDATA[第一个测试博客ahhahhdddadeee 12window.alert("aaa")console.log("bbbb")]]></content>
+    <content type="text"><![CDATA[好好变浓提第一个测试博客ahhahhdddadeee 12window.alert("aaa")console.log("bbbb")]]></content>
       <categories>
-        <category>Diary</category>
+        <category>js原生</category>
       </categories>
       <tags>
         <tag>test</tag>
