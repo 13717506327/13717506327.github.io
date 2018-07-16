@@ -9,15 +9,22 @@
     </url>
 
     <url>
-        <loc>http://jsonlee.top/tags/js%E5%8E%9F%E7%94%9F/</loc>
-        <lastmod>2018-07-14T22:50:11.407Z</lastmod>
+        <loc>http://jsonlee.top/tags/function/</loc>
+        <lastmod>2018-07-16T04:33:39.575Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://jsonlee.top/tags/function/</loc>
-        <lastmod>2018-07-14T22:50:11.407Z</lastmod>
+        <loc>http://jsonlee.top/tags/js%E5%8E%9F%E7%94%9F/</loc>
+        <lastmod>2018-07-16T06:00:57.946Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/tags/%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/</loc>
+        <lastmod>2018-07-16T06:00:57.946Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

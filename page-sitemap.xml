@@ -7,14 +7,14 @@
     </url>
     
     <url>
-        <loc>http://jsonlee.top/categories/</loc>
+        <loc>http://jsonlee.top/tags/</loc>
         <lastmod>2018-07-13T03:41:04.493Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://jsonlee.top/tags/</loc>
+        <loc>http://jsonlee.top/categories/</loc>
         <lastmod>2018-07-13T03:41:04.493Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>

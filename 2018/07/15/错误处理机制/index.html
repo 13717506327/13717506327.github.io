@@ -73,7 +73,7 @@
 
 
 
-  <meta name="keywords" content="js原生,function," />
+  <meta name="keywords" content="js原生,错误处理," />
 
 
 
@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="函数的声明 function 命令 函数表达式 Function   函数的属性和方法 name属性 length属性   函数的参数 参数的传递方式 arguments 对象 callee   函数的其他特性 闭包     函数的声明函数 有三种申明方式：  function 命令 函数表达式 Function 构造函数  function 命令123function print(s) &amp;#">
-<meta name="keywords" content="js原生,function">
+<meta name="description" content="文章目录  文章目录 Error 实例对象 error 实例的属性和方法   原生错误类型 SyntaxError 对象 ReferenceError 对象 RangeError 对象 TypeError 对象 URIError 对象 EvalError 对象   自定义错误类型 throw语句 try…catch 结构 finally   Error 实例对象JavaScript 解析或运行时，">
+<meta name="keywords" content="js原生,错误处理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="function">
-<meta property="og:url" content="http://jsonlee.top/2018/07/15/function/index.html">
+<meta property="og:title" content="错误处理机制">
+<meta property="og:url" content="http://jsonlee.top/2018/07/15/错误处理机制/index.html">
 <meta property="og:site_name" content="json`s blog">
-<meta property="og:description" content="函数的声明 function 命令 函数表达式 Function   函数的属性和方法 name属性 length属性   函数的参数 参数的传递方式 arguments 对象 callee   函数的其他特性 闭包     函数的声明函数 有三种申明方式：  function 命令 函数表达式 Function 构造函数  function 命令123function print(s) &amp;#">
+<meta property="og:description" content="文章目录  文章目录 Error 实例对象 error 实例的属性和方法   原生错误类型 SyntaxError 对象 ReferenceError 对象 RangeError 对象 TypeError 对象 URIError 对象 EvalError 对象   自定义错误类型 throw语句 try…catch 结构 finally   Error 实例对象JavaScript 解析或运行时，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-16T04:33:39.575Z">
+<meta property="og:updated_time" content="2018-07-16T06:00:57.946Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="function">
-<meta name="twitter:description" content="函数的声明 function 命令 函数表达式 Function   函数的属性和方法 name属性 length属性   函数的参数 参数的传递方式 arguments 对象 callee   函数的其他特性 闭包     函数的声明函数 有三种申明方式：  function 命令 函数表达式 Function 构造函数  function 命令123function print(s) &amp;#">
+<meta name="twitter:title" content="错误处理机制">
+<meta name="twitter:description" content="文章目录  文章目录 Error 实例对象 error 实例的属性和方法   原生错误类型 SyntaxError 对象 ReferenceError 对象 RangeError 对象 TypeError 对象 URIError 对象 EvalError 对象   自定义错误类型 throw语句 try…catch 结构 finally   Error 实例对象JavaScript 解析或运行时，">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://jsonlee.top/2018/07/15/function/"/>
+  <link rel="canonical" href="http://jsonlee.top/2018/07/15/错误处理机制/"/>
 
 
 
 
 
-  <title>function | json`s blog</title>
+  <title>错误处理机制 | json`s blog</title>
   
 
 
@@ -302,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jsonlee.top/2018/07/15/function/">
+    <link itemprop="mainEntityOfPage" href="http://jsonlee.top/2018/07/15/错误处理机制/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大锤">
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">function</h1>
+          <h1 class="post-title" itemprop="name headline">错误处理机制</h1>
         
 
         <div class="post-meta">
@@ -331,7 +331,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-15T06:39:58+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-15T23:31:58+08:00">
                 2018-07-15
               </time>
             
@@ -347,7 +347,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-07-16T12:33:39+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-16T14:00:57+08:00">
                 2018-07-16
               </time>
             
@@ -400,7 +400,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  779 字
+                  1,231 字
                 </span>
               
 
@@ -416,7 +416,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -437,50 +437,51 @@
       
 
       
-        <!-- TOC -->
+        <h2 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h2><!-- TOC -->
 <ul>
-<li><a href="#函数的声明">函数的声明</a><ul>
-<li><a href="#function-命令">function 命令</a></li>
-<li><a href="#函数表达式">函数表达式</a></li>
-<li><a href="#function">Function</a></li>
+<li><a href="#文章目录">文章目录</a></li>
+<li><a href="#error-实例对象">Error 实例对象</a><ul>
+<li><a href="#error-实例的属性和方法">error 实例的属性和方法</a></li>
 </ul>
 </li>
-<li><a href="#函数的属性和方法">函数的属性和方法</a><ul>
-<li><a href="#name属性">name属性</a></li>
-<li><a href="#length属性">length属性</a></li>
+<li><a href="#原生错误类型">原生错误类型</a><ul>
+<li><a href="#syntaxerror-对象">SyntaxError 对象</a></li>
+<li><a href="#referenceerror-对象">ReferenceError 对象</a></li>
+<li><a href="#rangeerror-对象">RangeError 对象</a></li>
+<li><a href="#typeerror-对象">TypeError 对象</a></li>
+<li><a href="#urierror-对象">URIError 对象</a></li>
+<li><a href="#evalerror-对象">EvalError 对象</a></li>
 </ul>
 </li>
-<li><a href="#函数的参数">函数的参数</a><ul>
-<li><a href="#参数的传递方式">参数的传递方式</a></li>
-<li><a href="#arguments-对象">arguments 对象</a></li>
-<li><a href="#callee">callee</a></li>
-</ul>
-</li>
-<li><a href="#函数的其他特性">函数的其他特性</a><ul>
-<li><a href="#闭包">闭包</a></li>
-</ul>
-</li>
+<li><a href="#自定义错误类型">自定义错误类型</a></li>
+<li><a href="#throw语句">throw语句</a></li>
+<li><a href="#trycatch-结构">try…catch 结构</a></li>
+<li><a href="#finally">finally</a></li>
 </ul>
 <!-- /TOC -->
-<h2 id="函数的声明"><a href="#函数的声明" class="headerlink" title="函数的声明"></a>函数的声明</h2><p>函数 有三种申明方式：</p>
-<ul>
-<li>function 命令</li>
-<li>函数表达式</li>
-<li>Function 构造函数</li>
+<h2 id="Error-实例对象"><a href="#Error-实例对象" class="headerlink" title="Error 实例对象"></a>Error 实例对象</h2><p>JavaScript 解析或运行时，一旦发生错误，引擎就会抛出一个错误对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> err = <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'出错了'</span>);</span><br><span class="line">err.message <span class="comment">// "出错了"</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="error-实例的属性和方法"><a href="#error-实例的属性和方法" class="headerlink" title="error 实例的属性和方法"></a>error 实例的属性和方法</h3><ul>
+<li>message：错误提示信息</li>
+<li>错误名称（非标准属性</li>
+<li>stack：错误的堆栈（非标准属性）</li>
 </ul>
-<h3 id="function-命令"><a href="#function-命令" class="headerlink" title="function 命令"></a>function 命令</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">print</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h3><p>采用函数表达式声明函数时，function命令后面不带有函数名。如果加上<code>函数名</code>，该函数名只在函数体<code>内部有效</code>，在函数体 <code>外部无效</code>。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> print = <span class="function"><span class="keyword">function</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(s);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> print = <span class="function"><span class="keyword">function</span> <span class="title">x</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="comment">// x 只能在此函数内部使用</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">typeof</span> x);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<h3 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h3><p>最后一个参数是add函数的“函数体”，其他参数都是add函数的参数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> add = <span class="keyword">new</span> <span class="built_in">Function</span>(</span><br><span class="line">  <span class="string">'x'</span>,</span><br><span class="line">  <span class="string">'y'</span>,</span><br><span class="line">  <span class="string">'return x + y'</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="函数的属性和方法"><a href="#函数的属性和方法" class="headerlink" title="函数的属性和方法"></a>函数的属性和方法</h2><h3 id="name属性"><a href="#name属性" class="headerlink" title="name属性"></a>name属性</h3><p>返回函数的名字<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">f1.name <span class="comment">// "f1"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> f2 = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line">f2.name <span class="comment">// "f2"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> f3 = <span class="function"><span class="keyword">function</span> <span class="title">myName</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="comment">// 返回 function命令后 函数名</span></span><br><span class="line">f3.name <span class="comment">// 'myName'</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="length属性"><a href="#length属性" class="headerlink" title="length属性"></a>length属性</h3><p>返回函数预期传入的参数个数，即函数定义之中的参数个数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不管调用时输入了多少个参数，length属性始终等于2。</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">a, b</span>) </span>&#123;&#125;</span><br><span class="line">f.length <span class="comment">// 2</span></span><br></pre></td></tr></table></figure></p>
-<hr>
-<h2 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h2><h3 id="参数的传递方式"><a href="#参数的传递方式" class="headerlink" title="参数的传递方式"></a>参数的传递方式</h3><blockquote>
-<p>函数参数如果是<code>原始类型</code>的值（数值、字符串、布尔值），传递方式是<code>传值传递</code>（passes by value）。这意味着，在函数体内修改参数值，不会影响到函数外部；如果函数参数是<code>复合类型</code>的值（数组、对象、其他函数），传递方式是<code>传址传递</code>（pass by reference）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throwit</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">''</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">catchit</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    throwit();</span><br><span class="line">  &#125; <span class="keyword">catch</span>(e) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.stack); <span class="comment">// print stack trace</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 错误堆栈的最内层是throwit函数，然后是catchit函数，最后是函数的运行环境。</span></span><br><span class="line">catchit()</span><br><span class="line"><span class="comment">// Error</span></span><br><span class="line"><span class="comment">//    at throwit (~/examples/throwcatch.js:9:11)</span></span><br><span class="line"><span class="comment">//    at catchit (~/examples/throwcatch.js:3:9)</span></span><br><span class="line"><span class="comment">//    at repl:1:5</span></span><br></pre></td></tr></table></figure>
+<h2 id="原生错误类型"><a href="#原生错误类型" class="headerlink" title="原生错误类型"></a>原生错误类型</h2><blockquote>
+<p>Error实例对象是最一般的错误类型，在它的基础上，JavaScript 还定义了其他6种错误对象。也就是说，存在Error的6个派生对象。</p>
 </blockquote>
-<h3 id="arguments-对象"><a href="#arguments-对象" class="headerlink" title="arguments 对象"></a>arguments 对象</h3><p>arguments读取函数调用时传入函数内部所有的参数，arguments为只读对象(伪数组)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// ES6</span></span><br><span class="line"><span class="keyword">var</span> argus = <span class="built_in">Array</span>.from(<span class="built_in">arguments</span>)</span><br></pre></td></tr></table></figure></p>
-<h3 id="callee"><a href="#callee" class="headerlink" title="callee"></a>callee</h3><p>arguments对象带有一个callee属性，返回它所对应的原函数;可以通过arguments.callee，达到调用函数自身的目的。这个属性在严格模式里面是禁用的，因此不建议使用。</p>
-<h2 id="函数的其他特性"><a href="#函数的其他特性" class="headerlink" title="函数的其他特性"></a>函数的其他特性</h2><h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>闭包的最大用处有两个，一个是可以读取函数内部的变量，另一个就是让这些变量始终保持在内存中，即闭包可以使得它的诞生环境一直存在。</p>
-<p>注意，外层函数每次运行，都会生成一个新的闭包，而这个闭包又会保留外层函数的内部变量，所以内存消耗很大。因此不能滥用闭包，否则会造成网页的性能问题。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createIncrementor</span>(<span class="params">start</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 为了在函数外部读取 start的值 将 start的 值返回</span></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> start++;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> inc = createIncrementor(<span class="number">5</span>);</span><br><span class="line"><span class="comment">// inc使得函数createIncrementor的内部环境，一直存在于内存中。所以，闭包可以看作是函数内部作用域的一个接口。</span></span><br><span class="line">inc() <span class="comment">// 5</span></span><br><span class="line">inc() <span class="comment">// 6</span></span><br><span class="line">inc() <span class="comment">// 7</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="SyntaxError-对象"><a href="#SyntaxError-对象" class="headerlink" title="SyntaxError 对象"></a>SyntaxError 对象</h3><p><code>SyntaxError</code>对象是解析代码时发生的语法错误。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 变量名错误</span></span><br><span class="line"><span class="keyword">var</span> <span class="number">1</span>a;</span><br><span class="line"><span class="comment">// Uncaught SyntaxError: Invalid or unexpected token</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 缺少括号</span></span><br><span class="line"><span class="built_in">console</span>.log <span class="string">'hello'</span>);</span><br><span class="line"><span class="comment">// Uncaught SyntaxError: Unexpected string</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="ReferenceError-对象"><a href="#ReferenceError-对象" class="headerlink" title="ReferenceError 对象"></a>ReferenceError 对象</h3><p><code>referenceError</code>对象是引用一个不存在的变量时发生的错误。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用一个不存在的变量</span></span><br><span class="line">unknownVariable</span><br><span class="line"><span class="comment">// Uncaught ReferenceError: unknownVariable is not defined</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="RangeError-对象"><a href="#RangeError-对象" class="headerlink" title="RangeError 对象"></a>RangeError 对象</h3><p><code>RangeError</code>对象是一个值超出有效范围时发生的错误。主要有几种情况，一是数组长度为负数，二是Number对象的方法参数超出范围，以及函数堆栈超过最大值。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 数组长度不得为负数</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">-1</span>)</span><br><span class="line"><span class="comment">// Uncaught RangeError: Invalid array length</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="TypeError-对象"><a href="#TypeError-对象" class="headerlink" title="TypeError 对象"></a>TypeError 对象</h3><p><code>TypeError</code>对象是变量或参数不是预期类型时发生的错误。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line">obj.unknownMethod()</span><br><span class="line"><span class="comment">// Uncaught TypeError: obj.unknownMethod is not a function</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="URIError-对象"><a href="#URIError-对象" class="headerlink" title="URIError 对象"></a>URIError 对象</h3><p><code>URIError</code>对象是 URI 相关函数的参数不正确时抛出的错误，主要涉及<code>encodeURI()</code>、<code>decodeURI()</code>、<code>encodeURIComponent()</code>、<code>decodeURIComponent()</code>、<code>escape()</code>和<code>unescape()</code>这六个函数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">decodeURI</span>(<span class="string">'%2'</span>)</span><br><span class="line"><span class="comment">// URIError: URI malformed</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="EvalError-对象"><a href="#EvalError-对象" class="headerlink" title="EvalError 对象"></a>EvalError 对象</h3><p>eval函数没有被正确执行时，会抛出EvalError错误。该错误类型已经不再使用了，只是为了保证与以前代码兼容，才继续保留。</p>
+<h2 id="自定义错误类型"><a href="#自定义错误类型" class="headerlink" title="自定义错误类型"></a>自定义错误类型</h2><p>除了 JavaScript 原生提供的七种错误对象，还可以定义自己的错误对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">UserError</span>(<span class="params">message</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.message = message || <span class="string">'默认信息'</span>;</span><br><span class="line">  <span class="keyword">this</span>.name = <span class="string">'UserError'</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">UserError.prototype = <span class="keyword">new</span> <span class="built_in">Error</span>();</span><br><span class="line">UserError.prototype.constructor = UserError;</span><br></pre></td></tr></table></figure></p>
+<h2 id="throw语句"><a href="#throw语句" class="headerlink" title="throw语句"></a>throw语句</h2><p>throw语句的作用是手动中断程序执行，抛出一个错误。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (x &lt; <span class="number">0</span>) &#123;</span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'x 必须为正数'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Uncaught ReferenceError: x is not defined</span></span><br></pre></td></tr></table></figure></p>
+<p>throw 可抛出任意类型的值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 抛出一个字符串</span></span><br><span class="line"><span class="keyword">throw</span> <span class="string">'Error！'</span>; <span class="comment">// Uncaught Error！</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 抛出一个数值</span></span><br><span class="line"><span class="keyword">throw</span> <span class="number">42</span>; <span class="comment">// Uncaught 42</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 抛出一个布尔值</span></span><br><span class="line"><span class="keyword">throw</span> <span class="literal">true</span>; <span class="comment">// Uncaught true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 抛出一个对象</span></span><br><span class="line"><span class="keyword">throw</span> &#123;</span><br><span class="line">  toString: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'Error!'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;; <span class="comment">// // Uncaught &#123;toString: ƒ&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 抛出一个自定义错误</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">UserError</span>(<span class="params">message</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.message = message || <span class="string">'默认信息'</span>;</span><br><span class="line">  <span class="keyword">this</span>.name = <span class="string">'UserError'</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">throw</span> <span class="keyword">new</span> UserError(<span class="string">'出错了！'</span>); <span class="comment">// Uncaught UserError &#123;message: "出错了！", name: "UserError"&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="try…catch-结构"><a href="#try…catch-结构" class="headerlink" title="try…catch 结构"></a>try…catch 结构</h2><p>一旦发生错误，程序就中止执行了。JavaScript 提供了<code>try...catch</code>结构，允许对错误进行处理，选择是否往下执行。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'出错了!'</span>);</span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(e.name + <span class="string">": "</span> + e.message);</span><br><span class="line">  <span class="built_in">console</span>.log(e.stack);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Error: 出错了!</span></span><br><span class="line"><span class="comment">//   at &lt;anonymous&gt;:3:9</span></span><br><span class="line"><span class="comment">//   ...</span></span><br></pre></td></tr></table></figure></p>
+<p><code>catch</code>代码块捕获错误之后，程序不会中断，会按照正常流程继续执行下去。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="keyword">throw</span> <span class="string">"出错了"</span>;</span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">111</span>);</span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">// 被catch代码块捕获后，程序会继续向下执行</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">222</span>); </span><br><span class="line"><span class="comment">// 111</span></span><br><span class="line"><span class="comment">// 222</span></span><br></pre></td></tr></table></figure></p>
+<p>catch代码块之中，还可以再抛出错误，甚至使用嵌套的try…catch结构<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> n = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="keyword">throw</span> n;</span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">  <span class="keyword">if</span> (e &lt;= <span class="number">50</span>) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">throw</span> e;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="finally"><a href="#finally" class="headerlink" title="finally"></a>finally</h2><p>try…catch结构允许在最后添加一个finally代码块，表示不管是否出现错误，都必需在最后运行的语句。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="number">0</span>);</span><br><span class="line">      <span class="keyword">throw</span> <span class="string">'bug'</span>;</span><br><span class="line">    &#125; <span class="keyword">catch</span>(e) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>; <span class="comment">// 这句原本会延迟到 finally 代码块结束再执行</span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="number">2</span>); <span class="comment">// 不会运行</span></span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="number">3</span>);</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">// 这句会覆盖掉前面那句 return</span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="number">4</span>); <span class="comment">// 不会运行</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">5</span>); <span class="comment">// 不会运行</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> result = f();</span><br><span class="line">  <span class="comment">// 0</span></span><br><span class="line">  <span class="comment">// 1</span></span><br><span class="line">  <span class="comment">// 3</span></span><br><span class="line"></span><br><span class="line">  result</span><br><span class="line">  <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="string">'出错了！'</span>;</span><br><span class="line">  &#125; <span class="keyword">catch</span>(e) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'捕捉到内部错误'</span>);</span><br><span class="line">    <span class="keyword">throw</span> e; <span class="comment">// 这句原本会等到finally结束再执行</span></span><br><span class="line">  &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">// 直接返回</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  f();</span><br><span class="line">&#125; <span class="keyword">catch</span>(e) &#123;</span><br><span class="line">  <span class="comment">// 此处不会执行</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'caught outer "bogus"'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//  捕捉到内部错误</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -510,7 +511,7 @@
           
             <a href="/tags/js原生/" rel="tag"><i class="fa fa-tag"></i> js原生</a>
           
-            <a href="/tags/function/" rel="tag"><i class="fa fa-tag"></i> function</a>
+            <a href="/tags/错误处理/" rel="tag"><i class="fa fa-tag"></i> 错误处理</a>
           
         </div>
       
@@ -535,8 +536,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/13/testMyBlog/" rel="next" title="testMyBlog">
-                <i class="fa fa-chevron-left"></i> testMyBlog
+              <a href="/2018/07/15/function/" rel="next" title="function">
+                <i class="fa fa-chevron-left"></i> function
               </a>
             
           </div>
@@ -545,8 +546,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/15/错误处理机制/" rel="prev" title="错误处理机制">
-                错误处理机制 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/16/Object/" rel="prev" title="Object">
+                Object <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -695,7 +696,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的声明"><span class="nav-text">函数的声明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#function-命令"><span class="nav-text">function 命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数表达式"><span class="nav-text">函数表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Function"><span class="nav-text">Function</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的属性和方法"><span class="nav-text">函数的属性和方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#name属性"><span class="nav-text">name属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#length属性"><span class="nav-text">length属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的参数"><span class="nav-text">函数的参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参数的传递方式"><span class="nav-text">参数的传递方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#arguments-对象"><span class="nav-text">arguments 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#callee"><span class="nav-text">callee</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的其他特性"><span class="nav-text">函数的其他特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包"><span class="nav-text">闭包</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文章目录"><span class="nav-text">文章目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Error-实例对象"><span class="nav-text">Error 实例对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#error-实例的属性和方法"><span class="nav-text">error 实例的属性和方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原生错误类型"><span class="nav-text">原生错误类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SyntaxError-对象"><span class="nav-text">SyntaxError 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReferenceError-对象"><span class="nav-text">ReferenceError 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RangeError-对象"><span class="nav-text">RangeError 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TypeError-对象"><span class="nav-text">TypeError 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URIError-对象"><span class="nav-text">URIError 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EvalError-对象"><span class="nav-text">EvalError 对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义错误类型"><span class="nav-text">自定义错误类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#throw语句"><span class="nav-text">throw语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#try…catch-结构"><span class="nav-text">try…catch 结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#finally"><span class="nav-text">finally</span></a></li></ol></div>
             
 
           </div>
@@ -1292,13 +1293,13 @@
       var articles = db.collection('articles')
 
       //https://hexo.io/zh-tw/docs/variables.html
-      var isPost = 'function'.length > 0
+      var isPost = '错误处理机制'.length > 0
       var isArchive = '' === 'true'
       var isCategory = ''.length > 0
       var isTag = ''.length > 0
 
       if (isPost) { //is article page
-        var title = 'function'
+        var title = '错误处理机制'
         var doc = articles.doc(title)
 
         getCount(doc, true).then(appendCountTo($('.post-meta')))
