@@ -93,7 +93,7 @@
 <meta property="og:description" content="概述JavaScript 提供了一个内部数据结构，用来表述对象的属性，控制它的行为。每个属性都有自己对应的属性描述对象，保存该属性的一些元信息。下面是属性描述对象的一个例子。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://jsonlee.top/2018/07/16/属性表述对象/原型链.jpg">
-<meta property="og:updated_time" content="2018-07-16T12:33:50.839Z">
+<meta property="og:updated_time" content="2018-07-16T14:09:36.071Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="属性描述对象">
 <meta name="twitter:description" content="概述JavaScript 提供了一个内部数据结构，用来表述对象的属性，控制它的行为。每个属性都有自己对应的属性描述对象，保存该属性的一些元信息。下面是属性描述对象的一个例子。">
@@ -349,7 +349,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-07-16T20:33:50+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-16T22:09:36+08:00">
                 2018-07-16
               </time>
             
@@ -413,7 +413,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  349 字
+                  1,135 字
                 </span>
               
 
@@ -429,7 +429,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  4 分钟
                 </span>
               
             </div>
@@ -450,8 +450,73 @@
       
 
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>JavaScript 提供了一个内部数据结构，用来表述对象的属性，控制它的行为。每个属性都有自己对应的属性描述对象，保存该属性的一些元信息。<br>下面是属性描述对象的一个例子。<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  configurable:<span class="literal">true</span>,</span><br><span class="line">  enumerable:<span class="literal">true</span>,</span><br><span class="line">  value:<span class="number">1</span>,</span><br><span class="line">  writable:<span class="literal">true</span>,</span><br><span class="line">  __proto__:<span class="built_in">Object</span> <span class="comment">// 可称为隐式原型 一个对象实例通过内部属性[[Prototype]]跟踪其原型对象。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>在JS里，万物皆对象。方法（Function）是对象，方法的原型(Function.prototype)是对象。因此，它们都会具有对象共有的特点。<br>即：对象具有属性<code>__proto__</code>，可称为隐式原型，一个对象的隐式原型指向构造该对象的构造函数的原型，这也保证了实例能够访问在构造函数原型中定义的属性和方法。<br>方法这个特殊的对象，除了和其他对象一样有上述<code>_proto_</code>属性之外，还有自己特有的属性——原型属性（<code>prototype</code>），这个属性是一个指针，指向一个对象，这个对象的用途就是包含所有实例共享的属性和方法（我们把这个对象叫做原型对象）。原型对象也有一个属性，叫做<code>constructor</code>，这个属性包含了一个指针，指回原构造函数。<br>具体如下图所示:<br><img src="/2018/07/16/属性表述对象/原型链.jpg" alt="原型链"></p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>JavaScript 提供了一个内部数据结构，用来表述对象的属性，控制它的行为。每个属性都有自己对应的属性描述对象，保存该属性的一些元信息。<br>下面是属性描述对象的一个例子。<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  configurable:<span class="literal">true</span>,</span><br><span class="line">  enumerable:<span class="literal">true</span>,</span><br><span class="line">  value:<span class="number">1</span>,</span><br><span class="line">  writable:<span class="literal">true</span>,</span><br><span class="line">  __proto__:<span class="built_in">Object</span>, <span class="comment">// 可称为隐式原型 一个对象实例通过内部属性[[Prototype]]跟踪其原型对象。</span></span><br><span class="line">  get:<span class="literal">undefined</span>,</span><br><span class="line">  set:<span class="literal">undefined</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在JS里，万物皆对象。方法（Function）是对象，方法的原型(Function.prototype)是对象。因此，它们都会具有对象共有的特点。<br>即：对象具有属性<code>__proto__</code>，可称为隐式原型，一个对象的隐式原型指向构造该对象的构造函数的原型，这也保证了实例能够访问在构造函数原型中定义的属性和方法。<br>方法这个特殊的对象，除了和其他对象一样有上述<code>_proto_</code>属性之外，还有自己特有的属性——原型属性（<code>prototype</code>），这个属性是一个指针，指向一个对象，这个对象的用途就是包含所有实例共享的属性和方法（我们把这个对象叫做原型对象）。原型对象也有一个属性，叫做<code>constructor</code>，这个属性包含了一个指针，指回原构造函数。<br>具体如下图所示:<br><img src="/2018/07/16/属性表述对象/原型链.jpg" alt="原型链"><br>上图表述：</p>
+<ol>
+<li><p>构造函数Foo()<br>构造函数的原型属性Foo.prototype指向了原型对象，在原型对象里有共有的方法，所有构造函数声明的实例（这里是f1，f2）都可以共享这个方法。</p>
+</li>
+<li><p>原型对象Foo.prototype<br>Foo.prototype保存着实例共享的方法，有一个指针constructor指回构造函数。</p>
+</li>
+<li><p>实例<br>f1和f2是Foo这个对象的两个实例，这两个对象也有属性<strong>proto</strong>，指向构造函数的原型对象，这样子就可以像上面1所说的访问原型对象的所有方法啦。</p>
+</li>
+<li><p>Foo()除了是方法，也是对象啊，它也有<strong>proto</strong>属性，指向谁呢？<br>指向它的构造函数的原型对象呗。函数的构造函数不就是Function嘛，因此这里的<strong>proto</strong>指向了Function.prototype。<br>其实除了Foo()，Function(), Object()也是一样的道理。</p>
+</li>
+<li><p>原型对象也是对象啊，它的<strong>proto</strong>属性，又指向谁呢？<br>同理，指向它的构造函数的原型对象呗。这里是Object.prototype.</p>
+</li>
+<li><p>最后，Object.prototype的<strong>proto</strong>属性指向null。</p>
+</li>
+</ol>
+<h2 id="属性描述对象6个元属性"><a href="#属性描述对象6个元属性" class="headerlink" title="属性描述对象6个元属性"></a>属性描述对象6个元属性</h2><ul>
+<li><strong>value</strong>： 该属性的属性值</li>
+<li><strong>writable</strong>：表示属性值（<code>value</code>）是否可改变（即是否可写），默认为<code>true</code>。</li>
+<li><strong>enumerable</strong>：布尔值，表示该属性是否可遍历，默认为<code>true</code>。如果设为<code>false</code>，会使得某些操作（比如<code>for...in</code>循环、<code>Object.keys()</code>）跳过该属性。</li>
+<li><strong>configurable</strong>：布尔值，表示可配置性，默认为<code>true</code>。如果设为<code>false</code>，将阻止某些操作改写该属性，比如无法删除该属性，也不得改变该属性的属性描述对象（value属性除外）。也就是说，<code>configurable</code>属性控制了属性描述对象的可写性。</li>
+<li><strong>get</strong>：函数，表示该属性的取值函数（getter），默认为<code>undefined</code></li>
+<li><strong>set</strong>：函数，表示该属性的存值函数（setter），默认为<code>undefined</code>。</li>
+</ul>
+<h3 id="描述符可同时具有的键值"><a href="#描述符可同时具有的键值" class="headerlink" title="描述符可同时具有的键值"></a>描述符可同时具有的键值</h3><table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center">configurable</th>
+<th style="text-align:center">enumerable</th>
+<th style="text-align:center">value</th>
+<th style="text-align:center">writable</th>
+<th style="text-align:center">get</th>
+<th style="text-align:center">set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据描述符</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center">no</td>
+</tr>
+<tr>
+<td>存取描述符</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center">no</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Object-getOwnPropertyDescriptor"><a href="#Object-getOwnPropertyDescriptor" class="headerlink" title="Object.getOwnPropertyDescriptor()"></a>Object.getOwnPropertyDescriptor()</h2><p><code>Object.getOwnPropertyDescriptor</code>方法可以获取属性描述对象。它的第一个参数是一个对象，第二个参数是一个字符串，对应该对象的某个属性名。注意，Object.getOwnPropertyDescriptor方法只能用于对象自身的属性，不能用于继承的属性。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">p</span>: <span class="string">'a'</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.getOwnPropertyDescriptor(obj, <span class="string">'p'</span>)</span><br><span class="line"><span class="comment">// Object &#123; value: "a",</span></span><br><span class="line"><span class="comment">//   writable: true,</span></span><br><span class="line"><span class="comment">//   enumerable: true,</span></span><br><span class="line"><span class="comment">//   configurable: true</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Object-getOwnPropertyNames"><a href="#Object-getOwnPropertyNames" class="headerlink" title="Object.getOwnPropertyNames()"></a>Object.getOwnPropertyNames()</h2><p><code>Object.getOwnPropertyNames</code>方法返回一个数组，成员是参数对象自身的全部属性的属性名，不管该属性是否可遍历。</p>
+<h2 id="Object-defineProperty-，Object-defineProperties"><a href="#Object-defineProperty-，Object-defineProperties" class="headerlink" title="Object.defineProperty()，Object.defineProperties()"></a>Object.defineProperty()，Object.defineProperties()</h2><p><code>Object.defineProperty(object, propertyName, attributesObject)</code></p>
+<ul>
+<li><code>object</code>：属性所在的对象</li>
+<li><code>propertyName</code>：属性名（它应该是一个字符串）</li>
+<li><code>attributesObject</code>：属性描述对象<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.defineProperty(&#123;&#125;, <span class="string">'p'</span>, &#123;</span><br><span class="line">  value: <span class="number">123</span>,</span><br><span class="line">  writable: <span class="literal">false</span>,</span><br><span class="line">  enumerable: <span class="literal">true</span>,</span><br><span class="line">  configurable: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">obj.p <span class="comment">// 123</span></span><br><span class="line"></span><br><span class="line">obj.p = <span class="number">246</span>;</span><br><span class="line">obj.p <span class="comment">// 123</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如果一次性定义或修改多个属性，可以使用Object.defineProperties方法。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.defineProperties(&#123;&#125;, &#123;</span><br><span class="line">  p1: &#123; <span class="attr">value</span>: <span class="number">123</span>, <span class="attr">enumerable</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">  p2: &#123; <span class="attr">value</span>: <span class="string">'abc'</span>, <span class="attr">enumerable</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">  p3: &#123; <span class="attr">get</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="keyword">this</span>.p1 + <span class="keyword">this</span>.p2 &#125;,</span><br><span class="line">    enumerable:<span class="literal">true</span>,</span><br><span class="line">    configurable:<span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">obj.p1 <span class="comment">// 123</span></span><br><span class="line">obj.p2 <span class="comment">// "abc"</span></span><br><span class="line">obj.p3 <span class="comment">// "123abc"</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -662,7 +727,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-text">概述</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性描述对象6个元属性"><span class="nav-text">属性描述对象6个元属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#描述符可同时具有的键值"><span class="nav-text">描述符可同时具有的键值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-getOwnPropertyDescriptor"><span class="nav-text">Object.getOwnPropertyDescriptor()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-getOwnPropertyNames"><span class="nav-text">Object.getOwnPropertyNames()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-defineProperty-，Object-defineProperties"><span class="nav-text">Object.defineProperty()，Object.defineProperties()</span></a></li></ol></div>
             
 
           </div>
@@ -697,7 +762,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.8k</span>
+    <span title="Site words total count">4.6k</span>
   
 </div>
 <div class="powered-by">
