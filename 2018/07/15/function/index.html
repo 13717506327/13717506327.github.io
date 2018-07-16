@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="函数的声明 function 命令 函数表达式 Function   函数的属性和方法 name属性 length属性   函数的参数 参数的传递方式 arguments 对象 callee   函数的其他特性 闭包     函数的声明函数 有三种申明方式：  function 命令 函数表达式 Function 构造函数  function 命令123function print(s) &amp;#">
+<meta name="description" content="函数的声明函数 有三种申明方式：  function 命令 函数表达式 Function 构造函数">
 <meta name="keywords" content="js原生,function">
 <meta property="og:type" content="article">
 <meta property="og:title" content="function">
 <meta property="og:url" content="http://jsonlee.top/2018/07/15/function/index.html">
 <meta property="og:site_name" content="json`s blog">
-<meta property="og:description" content="函数的声明 function 命令 函数表达式 Function   函数的属性和方法 name属性 length属性   函数的参数 参数的传递方式 arguments 对象 callee   函数的其他特性 闭包     函数的声明函数 有三种申明方式：  function 命令 函数表达式 Function 构造函数  function 命令123function print(s) &amp;#">
+<meta property="og:description" content="函数的声明函数 有三种申明方式：  function 命令 函数表达式 Function 构造函数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-16T04:33:39.575Z">
+<meta property="og:updated_time" content="2018-07-16T07:06:16.819Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="function">
-<meta name="twitter:description" content="函数的声明 function 命令 函数表达式 Function   函数的属性和方法 name属性 length属性   函数的参数 参数的传递方式 arguments 对象 callee   函数的其他特性 闭包     函数的声明函数 有三种申明方式：  function 命令 函数表达式 Function 构造函数  function 命令123function print(s) &amp;#">
+<meta name="twitter:description" content="函数的声明函数 有三种申明方式：  function 命令 函数表达式 Function 构造函数">
 
 
 
@@ -347,7 +347,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-07-16T12:33:39+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-16T15:06:16+08:00">
                 2018-07-16
               </time>
             
@@ -400,7 +400,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  779 字
+                  726 字
                 </span>
               
 
@@ -437,37 +437,13 @@
       
 
       
-        <!-- TOC -->
-<ul>
-<li><a href="#函数的声明">函数的声明</a><ul>
-<li><a href="#function-命令">function 命令</a></li>
-<li><a href="#函数表达式">函数表达式</a></li>
-<li><a href="#function">Function</a></li>
-</ul>
-</li>
-<li><a href="#函数的属性和方法">函数的属性和方法</a><ul>
-<li><a href="#name属性">name属性</a></li>
-<li><a href="#length属性">length属性</a></li>
-</ul>
-</li>
-<li><a href="#函数的参数">函数的参数</a><ul>
-<li><a href="#参数的传递方式">参数的传递方式</a></li>
-<li><a href="#arguments-对象">arguments 对象</a></li>
-<li><a href="#callee">callee</a></li>
-</ul>
-</li>
-<li><a href="#函数的其他特性">函数的其他特性</a><ul>
-<li><a href="#闭包">闭包</a></li>
-</ul>
-</li>
-</ul>
-<!-- /TOC -->
-<h2 id="函数的声明"><a href="#函数的声明" class="headerlink" title="函数的声明"></a>函数的声明</h2><p>函数 有三种申明方式：</p>
+        <h2 id="函数的声明"><a href="#函数的声明" class="headerlink" title="函数的声明"></a>函数的声明</h2><p>函数 有三种申明方式：</p>
 <ul>
 <li>function 命令</li>
 <li>函数表达式</li>
 <li>Function 构造函数</li>
 </ul>
+<a id="more"></a>
 <h3 id="function-命令"><a href="#function-命令" class="headerlink" title="function 命令"></a>function 命令</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">print</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h3><p>采用函数表达式声明函数时，function命令后面不带有函数名。如果加上<code>函数名</code>，该函数名只在函数体<code>内部有效</code>，在函数体 <code>外部无效</code>。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> print = <span class="function"><span class="keyword">function</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(s);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> print = <span class="function"><span class="keyword">function</span> <span class="title">x</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="comment">// x 只能在此函数内部使用</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">typeof</span> x);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <h3 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h3><p>最后一个参数是add函数的“函数体”，其他参数都是add函数的参数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> add = <span class="keyword">new</span> <span class="built_in">Function</span>(</span><br><span class="line">  <span class="string">'x'</span>,</span><br><span class="line">  <span class="string">'y'</span>,</span><br><span class="line">  <span class="string">'return x + y'</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -534,10 +510,6 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/07/13/testMyBlog/" rel="next" title="testMyBlog">
-                <i class="fa fa-chevron-left"></i> testMyBlog
-              </a>
             
           </div>
 
@@ -730,7 +702,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.0k</span>
+    <span title="Site words total count">3.5k</span>
   
 </div>
 <div class="powered-by">

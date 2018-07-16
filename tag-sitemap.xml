@@ -2,29 +2,29 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://jsonlee.top/tags/test/</loc>
-        <lastmod>2018-07-14T22:44:25.826Z</lastmod>
+        <loc>http://jsonlee.top/tags/%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/</loc>
+        <lastmod>2018-07-16T07:06:13.809Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://jsonlee.top/tags/function/</loc>
-        <lastmod>2018-07-16T04:33:39.575Z</lastmod>
+        <lastmod>2018-07-16T07:06:16.819Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://jsonlee.top/tags/js%E5%8E%9F%E7%94%9F/</loc>
-        <lastmod>2018-07-16T06:00:57.946Z</lastmod>
+        <lastmod>2018-07-16T11:14:24.279Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://jsonlee.top/tags/%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/</loc>
-        <lastmod>2018-07-16T06:00:57.946Z</lastmod>
+        <loc>http://jsonlee.top/tags/object/</loc>
+        <lastmod>2018-07-16T11:14:24.279Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

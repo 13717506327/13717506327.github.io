@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="文章目录  文章目录 Error 实例对象 error 实例的属性和方法   原生错误类型 SyntaxError 对象 ReferenceError 对象 RangeError 对象 TypeError 对象 URIError 对象 EvalError 对象   自定义错误类型 throw语句 try…catch 结构 finally   Error 实例对象JavaScript 解析或运行时，">
+<meta name="description" content="Error 实例对象JavaScript 解析或运行时，一旦发生错误，引擎就会抛出一个错误对象。12var err = new Error(&apos;出错了&apos;);err.message // &quot;出错了&quot;">
 <meta name="keywords" content="js原生,错误处理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="错误处理机制">
 <meta property="og:url" content="http://jsonlee.top/2018/07/15/错误处理机制/index.html">
 <meta property="og:site_name" content="json`s blog">
-<meta property="og:description" content="文章目录  文章目录 Error 实例对象 error 实例的属性和方法   原生错误类型 SyntaxError 对象 ReferenceError 对象 RangeError 对象 TypeError 对象 URIError 对象 EvalError 对象   自定义错误类型 throw语句 try…catch 结构 finally   Error 实例对象JavaScript 解析或运行时，">
+<meta property="og:description" content="Error 实例对象JavaScript 解析或运行时，一旦发生错误，引擎就会抛出一个错误对象。12var err = new Error(&apos;出错了&apos;);err.message // &quot;出错了&quot;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-16T06:00:57.946Z">
+<meta property="og:updated_time" content="2018-07-16T07:06:13.809Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="错误处理机制">
-<meta name="twitter:description" content="文章目录  文章目录 Error 实例对象 error 实例的属性和方法   原生错误类型 SyntaxError 对象 ReferenceError 对象 RangeError 对象 TypeError 对象 URIError 对象 EvalError 对象   自定义错误类型 throw语句 try…catch 结构 finally   Error 实例对象JavaScript 解析或运行时，">
+<meta name="twitter:description" content="Error 实例对象JavaScript 解析或运行时，一旦发生错误，引擎就会抛出一个错误对象。12var err = new Error(&apos;出错了&apos;);err.message // &quot;出错了&quot;">
 
 
 
@@ -347,7 +347,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-07-16T14:00:57+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-16T15:06:13+08:00">
                 2018-07-16
               </time>
             
@@ -400,7 +400,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,231 字
+                  1,170 字
                 </span>
               
 
@@ -437,29 +437,8 @@
       
 
       
-        <h2 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h2><!-- TOC -->
-<ul>
-<li><a href="#文章目录">文章目录</a></li>
-<li><a href="#error-实例对象">Error 实例对象</a><ul>
-<li><a href="#error-实例的属性和方法">error 实例的属性和方法</a></li>
-</ul>
-</li>
-<li><a href="#原生错误类型">原生错误类型</a><ul>
-<li><a href="#syntaxerror-对象">SyntaxError 对象</a></li>
-<li><a href="#referenceerror-对象">ReferenceError 对象</a></li>
-<li><a href="#rangeerror-对象">RangeError 对象</a></li>
-<li><a href="#typeerror-对象">TypeError 对象</a></li>
-<li><a href="#urierror-对象">URIError 对象</a></li>
-<li><a href="#evalerror-对象">EvalError 对象</a></li>
-</ul>
-</li>
-<li><a href="#自定义错误类型">自定义错误类型</a></li>
-<li><a href="#throw语句">throw语句</a></li>
-<li><a href="#trycatch-结构">try…catch 结构</a></li>
-<li><a href="#finally">finally</a></li>
-</ul>
-<!-- /TOC -->
-<h2 id="Error-实例对象"><a href="#Error-实例对象" class="headerlink" title="Error 实例对象"></a>Error 实例对象</h2><p>JavaScript 解析或运行时，一旦发生错误，引擎就会抛出一个错误对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> err = <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'出错了'</span>);</span><br><span class="line">err.message <span class="comment">// "出错了"</span></span><br></pre></td></tr></table></figure></p>
+        <h2 id="Error-实例对象"><a href="#Error-实例对象" class="headerlink" title="Error 实例对象"></a>Error 实例对象</h2><p>JavaScript 解析或运行时，一旦发生错误，引擎就会抛出一个错误对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> err = <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'出错了'</span>);</span><br><span class="line">err.message <span class="comment">// "出错了"</span></span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <h3 id="error-实例的属性和方法"><a href="#error-实例的属性和方法" class="headerlink" title="error 实例的属性和方法"></a>error 实例的属性和方法</h3><ul>
 <li>message：错误提示信息</li>
 <li>错误名称（非标准属性</li>
@@ -696,7 +675,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文章目录"><span class="nav-text">文章目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Error-实例对象"><span class="nav-text">Error 实例对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#error-实例的属性和方法"><span class="nav-text">error 实例的属性和方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原生错误类型"><span class="nav-text">原生错误类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SyntaxError-对象"><span class="nav-text">SyntaxError 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReferenceError-对象"><span class="nav-text">ReferenceError 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RangeError-对象"><span class="nav-text">RangeError 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TypeError-对象"><span class="nav-text">TypeError 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URIError-对象"><span class="nav-text">URIError 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EvalError-对象"><span class="nav-text">EvalError 对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义错误类型"><span class="nav-text">自定义错误类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#throw语句"><span class="nav-text">throw语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#try…catch-结构"><span class="nav-text">try…catch 结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#finally"><span class="nav-text">finally</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Error-实例对象"><span class="nav-text">Error 实例对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#error-实例的属性和方法"><span class="nav-text">error 实例的属性和方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原生错误类型"><span class="nav-text">原生错误类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SyntaxError-对象"><span class="nav-text">SyntaxError 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReferenceError-对象"><span class="nav-text">ReferenceError 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RangeError-对象"><span class="nav-text">RangeError 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TypeError-对象"><span class="nav-text">TypeError 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URIError-对象"><span class="nav-text">URIError 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EvalError-对象"><span class="nav-text">EvalError 对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义错误类型"><span class="nav-text">自定义错误类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#throw语句"><span class="nav-text">throw语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#try…catch-结构"><span class="nav-text">try…catch 结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#finally"><span class="nav-text">finally</span></a></li></ol></div>
             
 
           </div>
@@ -731,7 +710,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.0k</span>
+    <span title="Site words total count">3.5k</span>
   
 </div>
 <div class="powered-by">
