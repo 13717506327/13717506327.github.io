@@ -73,7 +73,7 @@
 
 
 
-  <meta name="keywords" content="js原生,Array," />
+  <meta name="keywords" content="js原生,String," />
 
 
 
@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="构造函数Array是 JavaScript 的原生对象，同时也是一个构造函数，可以用它生成新的数组。123var arr = new Array(2);arr.length // 2arr // [ empty x 2 ] 如果没有使用new，运行结果也是一样的。123var arr = new Array(2);// 等同于var arr = Array(2); Array构造函数有一个很大的缺">
-<meta name="keywords" content="js原生,Array">
+<meta name="description" content="概述String对象是 JavaScript 原生提供的三个包装对象之一，用来生成字符串对象。字符串对象是一个类似数组的对象（很像数组，但不是数组）。1234567var s1 = &apos;abc&apos;;var s2 = new String(&apos;abc&apos;);typeof s1 // &quot;string&quot;typeof s2 // &quot;object&quot;s2.valueOf() // &quot;abc&quot;">
+<meta name="keywords" content="js原生,String">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Array">
-<meta property="og:url" content="http://jsonlee.top/2018/07/17/Array/index.html">
+<meta property="og:title" content="String">
+<meta property="og:url" content="http://jsonlee.top/2018/07/17/String/index.html">
 <meta property="og:site_name" content="json`s blog">
-<meta property="og:description" content="构造函数Array是 JavaScript 的原生对象，同时也是一个构造函数，可以用它生成新的数组。123var arr = new Array(2);arr.length // 2arr // [ empty x 2 ] 如果没有使用new，运行结果也是一样的。123var arr = new Array(2);// 等同于var arr = Array(2); Array构造函数有一个很大的缺">
+<meta property="og:description" content="概述String对象是 JavaScript 原生提供的三个包装对象之一，用来生成字符串对象。字符串对象是一个类似数组的对象（很像数组，但不是数组）。1234567var s1 = &apos;abc&apos;;var s2 = new String(&apos;abc&apos;);typeof s1 // &quot;string&quot;typeof s2 // &quot;object&quot;s2.valueOf() // &quot;abc&quot;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-17T05:49:59.429Z">
+<meta property="og:updated_time" content="2018-07-17T08:48:18.765Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Array">
-<meta name="twitter:description" content="构造函数Array是 JavaScript 的原生对象，同时也是一个构造函数，可以用它生成新的数组。123var arr = new Array(2);arr.length // 2arr // [ empty x 2 ] 如果没有使用new，运行结果也是一样的。123var arr = new Array(2);// 等同于var arr = Array(2); Array构造函数有一个很大的缺">
+<meta name="twitter:title" content="String">
+<meta name="twitter:description" content="概述String对象是 JavaScript 原生提供的三个包装对象之一，用来生成字符串对象。字符串对象是一个类似数组的对象（很像数组，但不是数组）。1234567var s1 = &apos;abc&apos;;var s2 = new String(&apos;abc&apos;);typeof s1 // &quot;string&quot;typeof s2 // &quot;object&quot;s2.valueOf() // &quot;abc&quot;">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://jsonlee.top/2018/07/17/Array/"/>
+  <link rel="canonical" href="http://jsonlee.top/2018/07/17/String/"/>
 
 
 
 
 
-  <title>Array | json`s blog</title>
+  <title>String | json`s blog</title>
   
 
 
@@ -302,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jsonlee.top/2018/07/17/Array/">
+    <link itemprop="mainEntityOfPage" href="http://jsonlee.top/2018/07/17/String/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大锤">
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Array</h1>
+          <h1 class="post-title" itemprop="name headline">String</h1>
         
 
         <div class="post-meta">
@@ -331,7 +331,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-17T12:02:12+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-17T15:50:45+08:00">
                 2018-07-17
               </time>
             
@@ -347,45 +347,12 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-07-17T13:49:59+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-17T16:48:18+08:00">
                 2018-07-17
               </time>
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js原生/" itemprop="url" rel="index">
-                    <span itemprop="name">js原生</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js原生/Array/" itemprop="url" rel="index">
-                    <span itemprop="name">Array</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -411,7 +378,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,048 字
+                  1,237 字
                 </span>
               
 
@@ -427,7 +394,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  8 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -448,47 +415,27 @@
       
 
       
-        <h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><p><code>Array</code>是 JavaScript 的原生对象，同时也是一个构造函数，可以用它生成新的数组。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">2</span>);</span><br><span class="line">arr.length <span class="comment">// 2</span></span><br><span class="line">arr <span class="comment">// [ empty x 2 ]</span></span><br></pre></td></tr></table></figure></p>
-<p>如果没有使用<code>new</code>，运行结果也是一样的。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">2</span>);</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="keyword">var</span> arr = <span class="built_in">Array</span>(<span class="number">2</span>);</span><br></pre></td></tr></table></figure></p>
-<p><code>Array</code>构造函数有一个很大的缺陷，就是不同的参数，会导致它的行为不一致。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 无参数时，返回一个空数组</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>() <span class="comment">// []</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 单个正整数参数，表示返回的新数组的长度</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>) <span class="comment">// [ empty ]</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">2</span>) <span class="comment">// [ empty x 2 ]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 非正整数的数值作为参数，会报错</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">3.2</span>) <span class="comment">// RangeError: Invalid array length</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">-3</span>) <span class="comment">// RangeError: Invalid array length</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 单个非数值（比如字符串、布尔值、对象等）作为参数，</span></span><br><span class="line"><span class="comment">// 则该参数是返回的新数组的成员</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">'abc'</span>) <span class="comment">// ['abc']</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>([<span class="number">1</span>]) <span class="comment">// [Array[1]]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 多参数时，所有参数都是返回的新数组的成员</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>, <span class="number">2</span>) <span class="comment">// [1, 2]</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>) <span class="comment">// ['a', 'b', 'c']</span></span><br></pre></td></tr></table></figure></p>
-<p>可以看到，Array作为构造函数，行为很不一致。因此，不建议使用它生成新数组，直接使用数组字面量是更好的做法。</p>
-<hr>
-<h2 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h2><h3 id="Array-isArray"><a href="#Array-isArray" class="headerlink" title="Array.isArray()"></a>Array.isArray()</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">typeof</span> arr <span class="comment">// "object"</span></span><br><span class="line"><span class="comment">// 它可以弥补typeof运算符的不足。</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(arr) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-<h2 id="实例方法"><a href="#实例方法" class="headerlink" title="实例方法"></a>实例方法</h2><h3 id="valueOf-NaN"><a href="#valueOf-NaN" class="headerlink" title="valueOf()"></a>valueOf()</h3><p><code>valueOf</code>方法是一个所有对象都拥有的方法，表示对该对象求值。不同对象的<code>valueOf</code>方法不尽一致，数组的<code>valueOf</code>方法返回数组本身。</p>
-<h3 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString()"></a>toString()</h3><p><code>toString</code>方法也是对象的通用方法，数组的<code>toString</code>方法返回数组的字符串形式。</p>
-<h3 id="push"><a href="#push" class="headerlink" title="push()"></a>push()</h3><p><code>push</code>方法用于在数组的末端添加<strong>一个或多个元素</strong>，并返回添加新元素后的数组长度。注意，该方法会改变原数组。</p>
-<h3 id="pop"><a href="#pop" class="headerlink" title="pop()"></a>pop()</h3><p><code>pop</code>方法用于删除数组的最后一个元素，并返回该元素。注意，该方法会改变原数组；对空数组使用pop方法，不会报错，而是返回undefined.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[].pop() <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure></p>
-<p><code>push</code>和<code>pop</code>结合使用，就构成了“后进先出”的栈结构（stack）。</p>
-<h3 id="shift"><a href="#shift" class="headerlink" title="shift()"></a>shift()</h3><p><code>shift</code>方法用于删除数组的第一个元素，并返回该元素。注意，该方法会改变原数组。</p>
-<h3 id="unshift"><a href="#unshift" class="headerlink" title="unshift()"></a>unshift()</h3><p><code>unshift</code>方法用于在数组的第一个位置添加元素，并返回添加新元素后的数组长度。注意，该方法会改变原数组。</p>
-<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><p><code>join</code>方法以指定参数作为分隔符，将所有数组成员连接为一个字符串返回。如果不提供参数，默认用逗号分隔;如果数组成员是undefined或null或空位，会被转成空字符串。</p>
-<h3 id="concat"><a href="#concat" class="headerlink" title="concat()"></a>concat()</h3><p><code>concat</code>方法用于多个数组的合并。它将新数组的成员，添加到原数组成员的后部，然后返回一个新数组，原数组不变。</p>
-<h3 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h3><p><code>reverse</code>方法用于颠倒排列数组元素，返回改变后的数组。注意，该方法将改变原数组。</p>
-<h3 id="slice"><a href="#slice" class="headerlink" title="slice()"></a>slice()</h3><p>slice方法用于提取目标数组的一部分，返回一个新数组，原数组不变。它的第一个参数为起始位置（从0开始），</p>
-<p>第二个参数为终止位置（但该位置的元素本身不包括在内）。</p>
-<p>如果省略第二个参数，则一直返回到原数组的最后一个成员。没有参数，实际上等于返回一个原数组的拷贝。</p>
-<p>如果slice方法的参数是负数，则表示倒数计算的位置。</p>
-<p>如果第一个参数大于等于数组长度，或者第二个参数小于第一个参数，则返回空数组。</p>
-<h3 id="splice"><a href="#splice" class="headerlink" title="splice()"></a>splice()</h3><p><code>arr.splice(start, count, addElement1, addElement2, ...);</code><br><code>splice</code>方法用于删除原数组的一部分成员，并可以在删除的位置添加新的数组成员，返回值是被删除的元素。注意，该方法会改变原数组。</p>
-<p><code>splice</code>的第一个参数是删除的起始位置（从0开始），第二个参数是被删除的元素个数。如果后面还有更多的参数，则表示这些就是要被插入数组的新元素。</p>
-<p>如果只是单纯地插入元素，<code>splice</code>方法的第二个参数可以设为0。</p>
-<h3 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h3><p><code>sort</code>方法对数组成员进行排序，默认是按照字典顺序排序。排序后，原数组将被改变。<br>如果想让<code>sort</code>方法按照自定义方式排序，可以传入一个函数作为参数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">10111</span>, <span class="number">1101</span>, <span class="number">111</span>].sort(<span class="function"><span class="keyword">function</span> (<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a - b;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// [111, 1101, 10111]</span></span><br><span class="line"></span><br><span class="line">[</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">"张三"</span>, <span class="attr">age</span>: <span class="number">30</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">"李四"</span>, <span class="attr">age</span>: <span class="number">24</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">name</span>: <span class="string">"王五"</span>, <span class="attr">age</span>: <span class="number">28</span>  &#125;</span><br><span class="line">].sort(<span class="function"><span class="keyword">function</span> (<span class="params">o1, o2</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> o1.age - o2.age;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// [</span></span><br><span class="line"><span class="comment">//   &#123; name: "李四", age: 24 &#125;,</span></span><br><span class="line"><span class="comment">//   &#123; name: "王五", age: 28  &#125;,</span></span><br><span class="line"><span class="comment">//   &#123; name: "张三", age: 30 &#125;</span></span><br><span class="line"><span class="comment">// ]</span></span><br></pre></td></tr></table></figure></p>
-<p>上面代码中，sort的参数函数本身接受两个参数，表示进行比较的两个数组成员。如果该函数的返回值大于0，表示第一个成员排在第二个成员后面；其他情况下，都是第一个元素排在第二个元素前面。</p>
-<h3 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h3><p><code>map</code>方法将数组的所有成员依次传入参数函数，然后把每一次的执行结果组成一个新数组返回。<br><code>map</code>方法的回调函数有三个参数，<code>elem</code>为当前成员的值，<code>index</code>为当前成员的位置，<code>arr</code>为原数组<br><code>map</code>方法还可以接受第二个参数，用来绑定回调函数内部的<code>this</code>变量</p>
-<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h3><p><code>forEach</code>方法不返回值，只用来循环操作数据。<br><code>forEach</code>方法也可以接受第二个参数，绑定参数函数的<code>this</code>变量<br><code>forEach</code>方法无法中断执行，总是会将所有成员遍历完。如果希望符合某种条件时，就中断遍历，要使用<code>for循环</code>。</p>
-<h3 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h3><p>filter方法用于过滤数组成员，满足条件的成员组成一个新数组返回。<br>它的参数是一个函数，所有数组成员依次执行该函数，返回结果为true的成员组成一个新数组返回。该方法不会改变原数组。<br>filter方法还可以接受第二个参数，用来绑定参数函数内部的this变量。</p>
-<h3 id="some"><a href="#some" class="headerlink" title="some()"></a>some()</h3><p>接受一个函数作为参数，所有数组成员依次执行该函数。该函数接受三个参数：当前成员、当前位置和整个数组，然后返回一个布尔值。<br>注意，对于空数组，<code>some</code>方法返回<code>false</code>，<br><code>some</code>方法是只要一个成员的返回值是<code>true</code>,则返回<code>true</code></p>
-<h3 id="every"><a href="#every" class="headerlink" title="every()"></a>every()</h3><p>用法同 <code>some()</code><br><code>every</code>方法是所有成员的返回值都是<code>true</code>,则返回<code>true</code><br>注意，对于空数组，<code>every</code>方法返回<code>true</code>，回调函数都不会执行。</p>
-<h3 id="reduce"><a href="#reduce" class="headerlink" title="reduce()"></a>reduce()</h3><p>第一个参数都是一个函数。该函数接受以下四个参数。</p>
-<ol>
-<li>累积变量，默认为数组的第一个成员</li>
-<li>当前变量，默认为数组的第二个成员</li>
-<li>当前位置（从0开始）</li>
-<li>原数组</li>
-</ol>
-<p>这四个参数之中，只有前两个是必须的，后两个则是可选的。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>].reduce(<span class="function"><span class="keyword">function</span> (<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a, b);</span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 1 2</span></span><br><span class="line"><span class="comment">// 3 3</span></span><br><span class="line"><span class="comment">// 6 4</span></span><br><span class="line"><span class="comment">// 10 5</span></span><br><span class="line"><span class="comment">//最后结果：15</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二个参数 指定初始值</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>].reduce(<span class="function"><span class="keyword">function</span> (<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;, <span class="number">10</span>);</span><br><span class="line"><span class="comment">// 25</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="reduceRight"><a href="#reduceRight" class="headerlink" title="reduceRight()"></a>reduceRight()</h3><p>reduce是从左到右处理（从第一个成员到最后一个成员），reduceRight则是从右到左（从最后一个成员到第一个成员），其他完全一样。</p>
-<h3 id="indexOf-，lastIndexOf"><a href="#indexOf-，lastIndexOf" class="headerlink" title="indexOf()，lastIndexOf()"></a>indexOf()，lastIndexOf()</h3><p><code>indexOf</code>方法返回给定元素在数组中第一次出现的位置，如果没有出现则返回<code>-1</code>.<br><code>indexOf</code>方法还可以接受第二个参数，表示搜索的开始位置。<br><code>lastIndexOf</code>方法返回给定元素在数组中最后一次出现的位置，如果没有出现则返回<code>-1</code>.<br>注意，这两个方法不能用来搜索<code>NaN</code>的位置，即它们无法确定数组成员是否包含<code>NaN</code>。</p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p><code>String</code>对象是 <code>JavaScript</code> 原生提供的三个包装对象之一，用来生成字符串对象。<br>字符串对象是一个类似数组的对象（很像数组，但不是数组）。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s1 = <span class="string">'abc'</span>;</span><br><span class="line"><span class="keyword">var</span> s2 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'abc'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> s1 <span class="comment">// "string"</span></span><br><span class="line"><span class="keyword">typeof</span> s2 <span class="comment">// "object"</span></span><br><span class="line"></span><br><span class="line">s2.valueOf() <span class="comment">// "abc"</span></span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h2 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h2><h3 id="String-fromCharCode"><a href="#String-fromCharCode" class="headerlink" title="String.fromCharCode()"></a>String.fromCharCode()</h3><p>String对象提供的静态方法（即定义在对象本身，而不是定义在对象实例的方法），主要是String.fromCharCode()。该方法的参数是一个或多个数值，代表 Unicode 码点，返回值是这些码点组成的字符串。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span>.fromCharCode() <span class="comment">// ""</span></span><br><span class="line"><span class="built_in">String</span>.fromCharCode(<span class="number">97</span>) <span class="comment">// "a"</span></span><br><span class="line"><span class="built_in">String</span>.fromCharCode(<span class="number">104</span>, <span class="number">101</span>, <span class="number">108</span>, <span class="number">108</span>, <span class="number">111</span>)</span><br><span class="line"><span class="comment">// "hello"</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="实例属性"><a href="#实例属性" class="headerlink" title="实例属性"></a>实例属性</h2><h3 id="String-prototype-charAt"><a href="#String-prototype-charAt" class="headerlink" title="String.prototype.charAt()"></a>String.prototype.charAt()</h3><p><code>charAt</code>方法返回指定位置的字符，参数是从<code>0</code>开始编号的位置。<br>如果参数为负数，或大于等于字符串的长度，返回空字符串。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'abc'</span>);</span><br><span class="line"></span><br><span class="line">s.charAt(<span class="number">1</span>) <span class="comment">// "b"</span></span><br><span class="line">s.charAt(s.length - <span class="number">1</span>) <span class="comment">// "c"</span></span><br><span class="line"></span><br><span class="line"><span class="string">'abc'</span>.charAt(<span class="number">1</span>) <span class="comment">// "b"</span></span><br><span class="line"><span class="string">'abc'</span>[<span class="number">1</span>] <span class="comment">// "b"</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="String-prototype-charCodeAt"><a href="#String-prototype-charCodeAt" class="headerlink" title="String.prototype.charCodeAt()"></a>String.prototype.charCodeAt()</h3><p><code>charCodeAt</code>方法返回字符串指定位置的 <code>Unicode 码点</code>（十进制表示），相当于<code>String.fromCharCode()</code>的逆操作。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'abc'</span>.charCodeAt(<span class="number">1</span>) <span class="comment">// 98</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="String-prototype-concat"><a href="#String-prototype-concat" class="headerlink" title="String.prototype.concat()"></a>String.prototype.concat()</h3><p><code>concat</code>方法用于连接两个或多个字符串，返回一个新字符串，不改变原字符串。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s1 = <span class="string">'abc'</span>;</span><br><span class="line"><span class="keyword">var</span> s2 = <span class="string">'def'</span>;</span><br><span class="line"></span><br><span class="line">s1.concat(s2) <span class="comment">// "abcdef"</span></span><br><span class="line">s1 <span class="comment">// "abc"</span></span><br><span class="line"></span><br><span class="line"><span class="string">'a'</span>.concat(<span class="string">'b'</span>, <span class="string">'c'</span>) <span class="comment">// "abc"</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="String-prototype-slice"><a href="#String-prototype-slice" class="headerlink" title="String.prototype.slice()"></a>String.prototype.slice()</h3><p>方法同数组的方法用法一致</p>
+<h3 id="String-prototype-substring"><a href="#String-prototype-substring" class="headerlink" title="String.prototype.substring()"></a>String.prototype.substring()</h3><p><code>substring</code>方法用于从原字符串取出子字符串并返回，不改变原字符串，跟<code>slice</code>方法很相像。它的第一个参数表示子字符串的开始位置，第二个位置表示结束位置（返回结果不含该位置）。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'JavaScript'</span>.substring(<span class="number">0</span>, <span class="number">4</span>) <span class="comment">// "Java"</span></span><br></pre></td></tr></table></figure></p>
+<p>如果省略第二个参数，则表示子字符串一直到原字符串的结束。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'JavaScript'</span>.substring(<span class="number">4</span>) <span class="comment">// "Script"</span></span><br></pre></td></tr></table></figure></p>
+<p>如果第一个参数大于第二个参数，substring方法会自动更换两个参数的位置。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">JavaScript<span class="string">'.substring(10, 4) // "Script"</span></span><br><span class="line"><span class="string">// 等同于</span></span><br><span class="line"><span class="string">'</span>JavaScript<span class="string">'.substring(4, 10) // "Script"</span></span><br></pre></td></tr></table></figure></p>
+<p>如果参数是负数，substring方法会自动将负数转为0。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'Javascript'</span>.substring(<span class="number">-3</span>) <span class="comment">// "JavaScript"</span></span><br><span class="line"><span class="string">'JavaScript'</span>.substring(<span class="number">4</span>, <span class="number">-3</span>) <span class="comment">// "Java"</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="String-prototype-substr"><a href="#String-prototype-substr" class="headerlink" title="String.prototype.substr()"></a>String.prototype.substr()</h3><p><code>substr</code>方法的第一个参数是子字符串的开始位置（从0开始计算），第二个参数是子字符串的长度。<br>如果省略第二个参数，则表示子字符串一直到原字符串的结束。<br>如果第一个参数是负数，表示倒数计算的字符位置。如果第二个参数是负数，将被自动转为0，因此会返回空字符串。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'JavaScript'</span>.substr(<span class="number">4</span>, <span class="number">6</span>) <span class="comment">// "Script"</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="String-prototype-indexOf-，String-prototype-lastIndexOf"><a href="#String-prototype-indexOf-，String-prototype-lastIndexOf" class="headerlink" title="String.prototype.indexOf()，String.prototype.lastIndexOf()"></a>String.prototype.indexOf()，String.prototype.lastIndexOf()</h3><p><code>indexOf</code>方法用于确定一个字符串在另一个字符串中第一次出现的位置，返回结果是匹配开始的位置。如果返回<code>-1</code>，就表示不匹配。<br><code>indexOf</code>方法还可以接受第二个参数，表示从该位置开始向后匹配。<br><code>lastIndexOf</code>方法的用法跟<code>indexOf</code>方法一致，主要的区别是<code>lastIndexOf</code>从尾部开始匹配，<code>indexOf</code>则是从头部开始匹配。</p>
+<h3 id="String-prototype-trim"><a href="#String-prototype-trim" class="headerlink" title="String.prototype.trim()"></a>String.prototype.trim()</h3><p><code>trim</code>方法用于去除字符串两端的空格，返回一个新字符串，不改变原字符串。<br>该方法去除的不仅是空格，还包括 <strong>制表符</strong>（\t、\v）、<strong>换行符</strong>（\n）和 <strong>回车符</strong>（\r）。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'  hello world  '</span>.trim()</span><br><span class="line"><span class="comment">// "hello world"</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="String-prototype-toLowerCase-，String-prototype-toUpperCase"><a href="#String-prototype-toLowerCase-，String-prototype-toUpperCase" class="headerlink" title="String.prototype.toLowerCase()，String.prototype.toUpperCase()"></a>String.prototype.toLowerCase()，String.prototype.toUpperCase()</h3><p><code>toLowerCase</code>方法用于将一个字符串全部转为小写，<code>toUpperCase</code>则是全部转为大写。它们都返回一个新字符串，不改变原字符串。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'Hello World'</span>.toLowerCase()</span><br><span class="line"><span class="comment">// "hello world"</span></span><br><span class="line"></span><br><span class="line"><span class="string">'Hello World'</span>.toUpperCase()</span><br><span class="line"><span class="comment">// "HELLO WORLD"</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="String-prototype-match"><a href="#String-prototype-match" class="headerlink" title="String.prototype.match()"></a>String.prototype.match()</h3><p><code>match</code>方法用于确定原字符串是否匹配某个子字符串，返回一个数组，成员为匹配的第一个字符串。如果没有找到匹配，则返回<code>null</code>。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'cat, bat, sat, fat'</span>.match(<span class="string">'at'</span>) <span class="comment">// ["at"]</span></span><br><span class="line"><span class="string">'cat, bat, sat, fat'</span>.match(<span class="string">'xt'</span>) <span class="comment">// null</span></span><br></pre></td></tr></table></figure></p>
+<p>返回的数组还有index属性和input属性，分别表示匹配字符串开始的位置和原始字符串。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> matches = <span class="string">'cat, bat, sat, fat'</span>.match(<span class="string">'at'</span>);</span><br><span class="line">matches.index <span class="comment">// 1</span></span><br><span class="line">matches.input <span class="comment">// "cat, bat, sat, fat"</span></span><br></pre></td></tr></table></figure></p>
+<p><code>match</code>方法还可以使用正则表达式作为参数</p>
+<h3 id="String-prototype-search-，String-prototype-replace"><a href="#String-prototype-search-，String-prototype-replace" class="headerlink" title="String.prototype.search()，String.prototype.replace()"></a>String.prototype.search()，String.prototype.replace()</h3><p><code>search</code>方法的用法基本等同于<code>match</code>，但是返回值为匹配的第一个位置。如果没有找到匹配，则返回<code>-1</code><br><code>replace</code>方法用于替换匹配的子字符串，一般情况下只替换第一个匹配（除非使用带有<code>g</code>修饰符的正则表达式）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'cat, bat, sat, fat'</span>.search(<span class="string">'at'</span>) <span class="comment">// 1</span></span><br><span class="line"><span class="string">'aaa'</span>.replace(<span class="string">'a'</span>, <span class="string">'b'</span>) <span class="comment">// "baa"</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="String-prototype-split"><a href="#String-prototype-split" class="headerlink" title="String.prototype.split()"></a>String.prototype.split()</h3><p><code>split</code>方法按照给定规则分割字符串，返回一个由分割出来的子字符串组成的数组。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'a|b|c'</span>.split(<span class="string">'|'</span>) <span class="comment">// ["a", "b", "c"]</span></span><br><span class="line"></span><br><span class="line"><span class="string">'a|b|c'</span>.split(<span class="string">''</span>) <span class="comment">// ["a", "|", "b", "|", "c"]</span></span><br></pre></td></tr></table></figure></p>
+<p>split方法还可以接受第二个参数，限定返回数组的最大成员数。</p>
 
       
     </div>
@@ -518,7 +465,7 @@
           
             <a href="/tags/js原生/" rel="tag"><i class="fa fa-tag"></i> js原生</a>
           
-            <a href="/tags/Array/" rel="tag"><i class="fa fa-tag"></i> Array</a>
+            <a href="/tags/String/" rel="tag"><i class="fa fa-tag"></i> String</a>
           
         </div>
       
@@ -543,8 +490,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/16/属性表述对象/" rel="next" title="属性描述对象">
-                <i class="fa fa-chevron-left"></i> 属性描述对象
+              <a href="/2018/07/17/Number/" rel="next" title="Number">
+                <i class="fa fa-chevron-left"></i> Number
               </a>
             
           </div>
@@ -553,8 +500,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/17/包装对象/" rel="prev" title="包装对象">
-                包装对象 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/17/RegExp/" rel="prev" title="RegExp">
+                RegExp <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -703,7 +650,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#构造函数"><span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态方法"><span class="nav-text">静态方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-isArray"><span class="nav-text">Array.isArray()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例方法"><span class="nav-text">实例方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#valueOf-NaN"><span class="nav-text">valueOf()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toString-NaN"><span class="nav-text">toString()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#push"><span class="nav-text">push()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pop"><span class="nav-text">pop()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shift"><span class="nav-text">shift()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unshift"><span class="nav-text">unshift()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#join"><span class="nav-text">join()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#concat"><span class="nav-text">concat()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reverse"><span class="nav-text">reverse()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#slice"><span class="nav-text">slice()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#splice"><span class="nav-text">splice()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort"><span class="nav-text">sort()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map"><span class="nav-text">map()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#forEach"><span class="nav-text">forEach()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filter"><span class="nav-text">filter()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#some"><span class="nav-text">some()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#every"><span class="nav-text">every()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reduce"><span class="nav-text">reduce()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reduceRight"><span class="nav-text">reduceRight()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#indexOf-，lastIndexOf"><span class="nav-text">indexOf()，lastIndexOf()</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态方法"><span class="nav-text">静态方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#String-fromCharCode"><span class="nav-text">String.fromCharCode()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例属性"><span class="nav-text">实例属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#String-prototype-charAt"><span class="nav-text">String.prototype.charAt()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-prototype-charCodeAt"><span class="nav-text">String.prototype.charCodeAt()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-prototype-concat"><span class="nav-text">String.prototype.concat()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-prototype-slice"><span class="nav-text">String.prototype.slice()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-prototype-substring"><span class="nav-text">String.prototype.substring()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-prototype-substr"><span class="nav-text">String.prototype.substr()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-prototype-indexOf-，String-prototype-lastIndexOf"><span class="nav-text">String.prototype.indexOf()，String.prototype.lastIndexOf()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-prototype-trim"><span class="nav-text">String.prototype.trim()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-prototype-toLowerCase-，String-prototype-toUpperCase"><span class="nav-text">String.prototype.toLowerCase()，String.prototype.toUpperCase()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-prototype-match"><span class="nav-text">String.prototype.match()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-prototype-search-，String-prototype-replace"><span class="nav-text">String.prototype.search()，String.prototype.replace()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-prototype-split"><span class="nav-text">String.prototype.split()</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1300,13 +1247,13 @@
       var articles = db.collection('articles')
 
       //https://hexo.io/zh-tw/docs/variables.html
-      var isPost = 'Array'.length > 0
+      var isPost = 'String'.length > 0
       var isArchive = '' === 'true'
       var isCategory = ''.length > 0
       var isTag = ''.length > 0
 
       if (isPost) { //is article page
-        var title = 'Array'
+        var title = 'String'
         var doc = articles.doc(title)
 
         getCount(doc, true).then(appendCountTo($('.post-meta')))
