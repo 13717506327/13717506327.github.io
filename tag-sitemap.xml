@@ -30,15 +30,22 @@
     </url>
 
     <url>
-        <loc>http://jsonlee.top/tags/js%E5%8E%9F%E7%94%9F/</loc>
+        <loc>http://jsonlee.top/tags/Array/</loc>
         <lastmod>2018-07-17T05:49:59.429Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://jsonlee.top/tags/Array/</loc>
-        <lastmod>2018-07-17T05:49:59.429Z</lastmod>
+        <loc>http://jsonlee.top/tags/js%E5%8E%9F%E7%94%9F/</loc>
+        <lastmod>2018-07-17T06:12:50.859Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/tags/%E5%8C%85%E8%A3%85%E5%AF%B9%E8%B1%A1/</loc>
+        <lastmod>2018-07-17T06:12:50.859Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

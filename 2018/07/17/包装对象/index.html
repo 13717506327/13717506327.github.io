@@ -73,7 +73,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="js原生,包装对象," />
 
 
 
@@ -84,17 +84,18 @@
 
 
 
-<meta name="description" content="just do it">
+<meta name="description" content="定义所谓“包装对象”，就是分别与数值、字符串、布尔值相对应的Number、String、Boolean三个原生对象。这三个原生对象可以把原始类型的值变成（包装成）对象。1234567891011var v1 = new Number(123);var v2 = new String(&apos;abc&apos;);var v3 = new Boolean(true);typeof v1 // &quot;object&quot;typ">
+<meta name="keywords" content="js原生,包装对象">
 <meta property="og:type" content="article">
 <meta property="og:title" content="包装对象">
 <meta property="og:url" content="http://jsonlee.top/2018/07/17/包装对象/index.html">
 <meta property="og:site_name" content="json`s blog">
-<meta property="og:description" content="just do it">
+<meta property="og:description" content="定义所谓“包装对象”，就是分别与数值、字符串、布尔值相对应的Number、String、Boolean三个原生对象。这三个原生对象可以把原始类型的值变成（包装成）对象。1234567891011var v1 = new Number(123);var v2 = new String(&apos;abc&apos;);var v3 = new Boolean(true);typeof v1 // &quot;object&quot;typ">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-17T05:51:49.045Z">
+<meta property="og:updated_time" content="2018-07-17T06:12:50.859Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="包装对象">
-<meta name="twitter:description" content="just do it">
+<meta name="twitter:description" content="定义所谓“包装对象”，就是分别与数值、字符串、布尔值相对应的Number、String、Boolean三个原生对象。这三个原生对象可以把原始类型的值变成（包装成）对象。1234567891011var v1 = new Number(123);var v2 = new String(&apos;abc&apos;);var v3 = new Boolean(true);typeof v1 // &quot;object&quot;typ">
 
 
 
@@ -346,12 +347,45 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-07-17T13:51:49+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-17T14:12:50+08:00">
                 2018-07-17
               </time>
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js原生/" itemprop="url" rel="index">
+                    <span itemprop="name">js原生</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js原生/包装对象/" itemprop="url" rel="index">
+                    <span itemprop="name">包装对象</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -377,7 +411,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0 字
+                  453 字
                 </span>
               
 
@@ -393,7 +427,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  2 分钟
                 </span>
               
             </div>
@@ -414,7 +448,14 @@
       
 
       
-        
+        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>所谓“包装对象”，就是分别与数值、字符串、布尔值相对应的<code>Number</code>、<code>String</code>、<code>Boolean</code>三个原生对象。这三个原生对象可以把原始类型的值变成（包装成）对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> v1 = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">123</span>);</span><br><span class="line"><span class="keyword">var</span> v2 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'abc'</span>);</span><br><span class="line"><span class="keyword">var</span> v3 = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> v1 <span class="comment">// "object"</span></span><br><span class="line"><span class="keyword">typeof</span> v2 <span class="comment">// "object"</span></span><br><span class="line"><span class="keyword">typeof</span> v3 <span class="comment">// "object"</span></span><br><span class="line"></span><br><span class="line">v1 === <span class="number">123</span> <span class="comment">// false</span></span><br><span class="line">v2 === <span class="string">'abc'</span> <span class="comment">// false</span></span><br><span class="line">v3 === <span class="literal">true</span> <span class="comment">// false</span></span><br></pre></td></tr></table></figure></p>
+<p>三种包装对象各自提供了许多实例方法，详见后文。这里介绍两种它们共同具有、从<code>Object</code>对象继承的方法：<code>valueOf</code>和<code>toString</code>。</p>
+<h3 id="valueOf-NaN"><a href="#valueOf-NaN" class="headerlink" title="valueOf()"></a>valueOf()</h3><p><code>valueOf</code>方法返回包装对象实例对应的原始类型的值。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">123</span>).valueOf()  <span class="comment">// 123</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'abc'</span>).valueOf() <span class="comment">// "abc"</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>).valueOf() <span class="comment">// true</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString()"></a>toString()</h3><p><code>toString</code>方法返回对应的字符串形式。<br>new Number(123).toString() // “123”<br>new String(‘abc’).toString() // “abc”<br>new Boolean(true).toString() // “true”</p>
+<h2 id="原始类型与实例对象的自动转换"><a href="#原始类型与实例对象的自动转换" class="headerlink" title="原始类型与实例对象的自动转换"></a>原始类型与实例对象的自动转换</h2><p>原始类型的值，可以自动当作包装对象调用，即调用包装对象的属性和方法。这时，JavaScript 引擎会自动将原始类型的值转为包装对象实例，在使用后立刻销毁实例。</p>
+<p>比如，字符串可以调用length属性，返回字符串的长度。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'abc'</span>;</span><br><span class="line">str.length <span class="comment">// 3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="keyword">var</span> strObj = <span class="keyword">new</span> <span class="built_in">String</span>(str)</span><br><span class="line"><span class="comment">// String &#123;</span></span><br><span class="line"><span class="comment">//   0: "a", 1: "b", 2: "c", length: 3, [[PrimitiveValue]]: "abc"</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line">strObj.length <span class="comment">// 3</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="自定义方法"><a href="#自定义方法" class="headerlink" title="自定义方法"></a>自定义方法</h2><p>除了原生的实例方法，包装对象还可以自定义方法和属性，供原始类型的值直接调用。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span>.prototype.double = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.valueOf() + <span class="keyword">this</span>.valueOf();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="string">'abc'</span>.double()</span><br><span class="line"><span class="comment">// abcabc</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Number</span>.prototype.double = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.valueOf() + <span class="keyword">this</span>.valueOf();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">(<span class="number">123</span>).double() <span class="comment">// 123外面必须要加上圆括号，否则后面的点运算符（.）会被解释成小数点。</span></span><br><span class="line"><span class="comment">// 246</span></span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -438,6 +479,14 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js原生/" rel="tag"><i class="fa fa-tag"></i> js原生</a>
+          
+            <a href="/tags/包装对象/" rel="tag"><i class="fa fa-tag"></i> 包装对象</a>
+          
+        </div>
       
 
       
@@ -520,8 +569,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -547,7 +605,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -558,7 +616,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -598,6 +656,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-text">定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#valueOf-NaN"><span class="nav-text">valueOf()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toString-NaN"><span class="nav-text">toString()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原始类型与实例对象的自动转换"><span class="nav-text">原始类型与实例对象的自动转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义方法"><span class="nav-text">自定义方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -626,7 +700,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">8.1k</span>
+    <span title="Site words total count">8.6k</span>
   
 </div>
 <div class="powered-by">

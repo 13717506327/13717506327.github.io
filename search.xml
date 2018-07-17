@@ -3,7 +3,15 @@
   <entry>
     <title><![CDATA[包装对象]]></title>
     <url>%2F2018%2F07%2F17%2F%E5%8C%85%E8%A3%85%E5%AF%B9%E8%B1%A1%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[定义所谓“包装对象”，就是分别与数值、字符串、布尔值相对应的Number、String、Boolean三个原生对象。这三个原生对象可以把原始类型的值变成（包装成）对象。1234567891011var v1 = new Number(123);var v2 = new String('abc');var v3 = new Boolean(true);typeof v1 // "object"typeof v2 // "object"typeof v3 // "object"v1 === 123 // falsev2 === 'abc' // falsev3 === true // false 三种包装对象各自提供了许多实例方法，详见后文。这里介绍两种它们共同具有、从Object对象继承的方法：valueOf和toString。 valueOf()valueOf方法返回包装对象实例对应的原始类型的值。123new Number(123).valueOf() // 123new String('abc').valueOf() // "abc"new Boolean(true).valueOf() // true toString()toString方法返回对应的字符串形式。new Number(123).toString() // “123”new String(‘abc’).toString() // “abc”new Boolean(true).toString() // “true” 原始类型与实例对象的自动转换原始类型的值，可以自动当作包装对象调用，即调用包装对象的属性和方法。这时，JavaScript 引擎会自动将原始类型的值转为包装对象实例，在使用后立刻销毁实例。 比如，字符串可以调用length属性，返回字符串的长度。123456789var str = 'abc';str.length // 3// 等同于var strObj = new String(str)// String &#123;// 0: "a", 1: "b", 2: "c", length: 3, [[PrimitiveValue]]: "abc"// &#125;strObj.length // 3 自定义方法除了原生的实例方法，包装对象还可以自定义方法和属性，供原始类型的值直接调用。12345678910111213String.prototype.double = function () &#123; return this.valueOf() + this.valueOf();&#125;;'abc'.double()// abcabcNumber.prototype.double = function () &#123; return this.valueOf() + this.valueOf();&#125;;(123).double() // 123外面必须要加上圆括号，否则后面的点运算符（.）会被解释成小数点。// 246]]></content>
+      <categories>
+        <category>js原生</category>
+        <category>包装对象</category>
+      </categories>
+      <tags>
+        <tag>js原生</tag>
+        <tag>包装对象</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Array]]></title>
