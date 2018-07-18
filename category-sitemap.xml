@@ -7,13 +7,6 @@
     </url>
 
     <url>
-        <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/Object/</loc>
-        <lastmod>2018-07-17T04:00:28.923Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/Array/</loc>
         <lastmod>2018-07-17T05:49:59.429Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -28,15 +21,50 @@
     </url>
 
     <url>
-        <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/</loc>
+        <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/Number/</loc>
         <lastmod>2018-07-17T07:48:07.336Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/Number/</loc>
-        <lastmod>2018-07-17T07:48:07.336Z</lastmod>
+        <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/Object/</loc>
+        <lastmod>2018-07-18T06:50:58.601Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/Object/this/</loc>
+        <lastmod>2018-07-18T06:50:58.601Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/</loc>
+        <lastmod>2018-07-18T11:21:45.500Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/</loc>
+        <lastmod>2018-07-18T11:21:45.500Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/class/</loc>
+        <lastmod>2018-07-18T11:21:45.500Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/class/%E7%BB%A7%E6%89%BF/</loc>
+        <lastmod>2018-07-18T11:21:45.500Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
