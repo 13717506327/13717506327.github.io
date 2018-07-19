@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="this就是属性或方法“当前”所在的对象。12345678910111213141516171819202122var person = &amp;#123;  name: &apos;张三&apos;,  describe: function () &amp;#123;    return &apos;姓名：&apos;+ this.name;  &amp;#125;&amp;#125;;person.describe()// &quot;姓名：张三&quot;function f()">
+<meta name="description" content="this就是属性或方法“当前”所在的对象。">
 <meta name="keywords" content="js原生,Object,this">
 <meta property="og:type" content="article">
 <meta property="og:title" content="this 关键字">
 <meta property="og:url" content="http://jsonlee.top/2018/07/18/this-关键字/index.html">
 <meta property="og:site_name" content="json`s blog">
-<meta property="og:description" content="this就是属性或方法“当前”所在的对象。12345678910111213141516171819202122var person = &amp;#123;  name: &apos;张三&apos;,  describe: function () &amp;#123;    return &apos;姓名：&apos;+ this.name;  &amp;#125;&amp;#125;;person.describe()// &quot;姓名：张三&quot;function f()">
+<meta property="og:description" content="this就是属性或方法“当前”所在的对象。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-18T06:50:58.601Z">
+<meta property="og:updated_time" content="2018-07-18T11:45:12.943Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="this 关键字">
-<meta name="twitter:description" content="this就是属性或方法“当前”所在的对象。12345678910111213141516171819202122var person = &amp;#123;  name: &apos;张三&apos;,  describe: function () &amp;#123;    return &apos;姓名：&apos;+ this.name;  &amp;#125;&amp;#125;;person.describe()// &quot;姓名：张三&quot;function f()">
+<meta name="twitter:description" content="this就是属性或方法“当前”所在的对象。">
 
 
 
@@ -347,7 +347,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-07-18T14:50:58+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-18T19:45:12+08:00">
                 2018-07-18
               </time>
             
@@ -459,7 +459,7 @@
       
 
       
-        <p><code>this</code>就是属性或方法“当前”所在的对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  name: <span class="string">'张三'</span>,</span><br><span class="line">  describe: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'姓名：'</span>+ <span class="keyword">this</span>.name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">person.describe()</span><br><span class="line"><span class="comment">// "姓名：张三"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">'姓名：'</span>+ <span class="keyword">this</span>.name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> A = &#123;</span><br><span class="line">  name: <span class="string">'张三'</span>,</span><br><span class="line">  describe: f</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> B = &#123;</span><br><span class="line">  name: <span class="string">'李四'</span>,</span><br><span class="line">  describe: f</span><br><span class="line">&#125;;</span><br><span class="line">A.describe() <span class="comment">// "姓名：张三"</span></span><br><span class="line">B.describe() <span class="comment">// "姓名：李四"</span></span><br></pre></td></tr></table></figure></p>
+        <p><code>this</code>就是属性或方法“当前”所在的对象。<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  name: <span class="string">'张三'</span>,</span><br><span class="line">  describe: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'姓名：'</span>+ <span class="keyword">this</span>.name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">person.describe()</span><br><span class="line"><span class="comment">// "姓名：张三"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">'姓名：'</span>+ <span class="keyword">this</span>.name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> A = &#123;</span><br><span class="line">  name: <span class="string">'张三'</span>,</span><br><span class="line">  describe: f</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> B = &#123;</span><br><span class="line">  name: <span class="string">'李四'</span>,</span><br><span class="line">  describe: f</span><br><span class="line">&#125;;</span><br><span class="line">A.describe() <span class="comment">// "姓名：张三"</span></span><br><span class="line">B.describe() <span class="comment">// "姓名：李四"</span></span><br></pre></td></tr></table></figure></p>
 <p>再看一个网页编程的例子。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"age"</span> <span class="attr">size</span>=<span class="string">3</span> <span class="attr">onChange</span>=<span class="string">"validate(this, 18, 99);"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">validate</span>(<span class="params">obj, lowval, hival</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">if</span> ((obj.value &lt; lowval) || (obj.value &gt; hival))</span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(<span class="string">'Invalid Value!'</span>);</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p><code>this</code>的设计目的就是在函数体内部，指代函数当前的运行环境。</p>
 <h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><h3 id="全局环境"><a href="#全局环境" class="headerlink" title="全局环境"></a>全局环境</h3><p>全局环境使用<code>this</code>，它指的就是顶层对象<code>window</code>。</p>
@@ -640,7 +640,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -651,7 +651,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -735,7 +735,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">19.7k</span>
+    <span title="Site words total count">21.1k</span>
   
 </div>
 <div class="powered-by">

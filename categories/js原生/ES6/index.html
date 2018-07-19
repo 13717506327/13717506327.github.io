@@ -86,14 +86,13 @@
 
 <meta name="description" content="just do it">
 <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://jsonlee.top/tags/index.html">
+<meta property="og:title" content="json`s blog">
+<meta property="og:url" content="http://jsonlee.top/categories/js原生/ES6/index.html">
 <meta property="og:site_name" content="json`s blog">
 <meta property="og:description" content="just do it">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-13T03:41:04.493Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="json`s blog">
 <meta name="twitter:description" content="just do it">
 
 
@@ -124,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://jsonlee.top/tags/"/>
+  <link rel="canonical" href="http://jsonlee.top/categories/js原生/ES6/"/>
 
 
 
 
 
-  <title>tags | json`s blog</title>
+  <title>分类: ES6 | json`s blog</title>
   
 
 
@@ -149,7 +148,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -287,54 +286,62 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-    
-    
-    <div class="post-block page">
-      <header class="post-header">
+  
+  
+  
+  <div class="post-block category">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-        
-        
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 17 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Array/" style="font-size: 12px; color: #ccc">Array</a> <a href="/tags/Number/" style="font-size: 12px; color: #ccc">Number</a> <a href="/tags/Object/" style="font-size: 12px; color: #ccc">Object</a> <a href="/tags/Promise/" style="font-size: 12px; color: #ccc">Promise</a> <a href="/tags/RegExp/" style="font-size: 12px; color: #ccc">RegExp</a> <a href="/tags/String/" style="font-size: 12px; color: #ccc">String</a> <a href="/tags/class/" style="font-size: 12px; color: #ccc">class</a> <a href="/tags/function/" style="font-size: 12px; color: #ccc">function</a> <a href="/tags/js原生/" style="font-size: 30px; color: #111">js原生</a> <a href="/tags/object/" style="font-size: 12px; color: #ccc">object</a> <a href="/tags/this/" style="font-size: 12px; color: #ccc">this</a> <a href="/tags/包装对象/" style="font-size: 12px; color: #ccc">包装对象</a> <a href="/tags/属性表述对象/" style="font-size: 12px; color: #ccc">属性表述对象</a> <a href="/tags/异步编程/" style="font-size: 12px; color: #ccc">异步编程</a> <a href="/tags/继承/" style="font-size: 12px; color: #ccc">继承</a> <a href="/tags/错误处理/" style="font-size: 12px; color: #ccc">错误处理</a> <a href="/tags/面向对象编程/" style="font-size: 12px; color: #ccc">面向对象编程</a>
-            </div>
-          </div>
-        
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>ES6<small>分类</small>
+        </h1>
       </div>
+
       
-      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/07/18/Promise/" itemprop="url">
+              
+                <span itemprop="name">Promise</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-07-18T19:39:11+08:00"
+              content="2018-07-18" >
+          07-18
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
       
     </div>
-    
-    
-    
+
   </div>
-
-
-          </div>
-          
-
-
-          
+  
+  
+  
 
   
 
 
+
+          </div>
+          
+
+
+          
 
         </div>
         
@@ -588,10 +595,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
@@ -1023,13 +1026,13 @@
       var articles = db.collection('articles')
 
       //https://hexo.io/zh-tw/docs/variables.html
-      var isPost = 'tags'.length > 0
+      var isPost = ''.length > 0
       var isArchive = '' === 'true'
       var isCategory = ''.length > 0
       var isTag = ''.length > 0
 
       if (isPost) { //is article page
-        var title = 'tags'
+        var title = ''
         var doc = articles.doc(title)
 
         getCount(doc, true).then(appendCountTo($('.post-meta')))
@@ -1037,7 +1040,7 @@
       else if (!isArchive && !isCategory && !isTag) { //is index page
         var titles = [] //array to titles
 
-        var postsstr = '' //if you have a better way to get titles of posts, please change it
+        var postsstr = 'titles.push("Promise");' //if you have a better way to get titles of posts, please change it
         eval(postsstr)
 
         var promises = titles.map(function (title) {
