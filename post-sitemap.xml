@@ -7,8 +7,24 @@
     </url>
 
     <url>
+        <loc>http://jsonlee.top/2018/07/19/async/</loc>
+        <lastmod>2018-07-19T14:43:42.505Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/2018/07/19/Generator/</loc>
+        <lastmod>2018-07-19T14:27:15.293Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://jsonlee.top/2018/07/18/Promise/</loc>
-        <lastmod>2018-07-18T15:57:48.998Z</lastmod>
+        <lastmod>2018-07-19T10:54:13.076Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

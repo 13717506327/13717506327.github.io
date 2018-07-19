@@ -100,22 +100,36 @@
     </url>
 
     <url>
+        <loc>http://jsonlee.top/tags/Promise/</loc>
+        <lastmod>2018-07-19T10:54:13.076Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/tags/Generator/</loc>
+        <lastmod>2018-07-19T14:27:15.293Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://jsonlee.top/tags/js%E5%8E%9F%E7%94%9F/</loc>
-        <lastmod>2018-07-18T15:57:48.998Z</lastmod>
+        <lastmod>2018-07-19T14:43:42.505Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://jsonlee.top/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/</loc>
-        <lastmod>2018-07-18T15:57:48.998Z</lastmod>
+        <lastmod>2018-07-19T14:43:42.505Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://jsonlee.top/tags/Promise/</loc>
-        <lastmod>2018-07-18T15:57:48.998Z</lastmod>
+        <loc>http://jsonlee.top/tags/async/</loc>
+        <lastmod>2018-07-19T14:43:42.505Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
