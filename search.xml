@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[flex 布局]]></title>
+    <url>%2F2018%2F07%2F20%2Fflex-%E5%B8%83%E5%B1%80%2F</url>
+    <content type="text"><![CDATA[布局的传统解决方案，基于盒状模型，依赖 display 属性 + position属性 + float属性。它对于那些特殊布局非常不方便，比如，垂直居中就不容易实现。任何一个容器都可以指定为 Flex 布局。 123.box&#123; display: flex;&#125; 行内元素也可以使用 Flex 布局。123.box&#123; display: inline-flex;&#125; Webkit 内核的浏览器，必须加上-webkit前缀。1234.box&#123; display: -webkit-flex; /* Safari */ display: flex;&#125; 注意，设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。 基本概念采用 Flex 布局的元素，称为 Flex 容器（flex container），简称”容器”。它的所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称”项目”。]]></content>
+      <categories>
+        <category>css</category>
+        <category>flex</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>flex</tag>
+        <tag>弹性布局</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[WebSocket]]></title>
     <url>%2F2018%2F07%2F20%2FWebSocket%2F</url>
     <content type="text"><![CDATA[它的最大特点就是，服务器可以主动向客户端推送信息，客户端也可以主动向服务器发送信息，是真正的双向平等对话，属于服务器推送技术的一种。特点 建立在 TCP 协议之上，服务器端的实现比较容易。 与 HTTP 协议有着良好的兼容性。默认端口也是80和443，并且握手阶段采用 HTTP 协议，因此握手时不容易屏蔽，能通过各种 HTTP 代理服务器。 数据格式比较轻量，性能开销小，通信高效。 可以发送文本，也可以发送二进制数据。 没有同源限制，客户端可以与任意服务器通信。 协议标识符是ws（如果加密，则为wss），服务器网址就是 URL。url格式1ws://example.com:80/some/path 客户端实例123456789101112131415var ws = new WebSocket("wss://echo.websocket.org");ws.onopen = function(evt) &#123; console.log("Connection open ..."); ws.send("Hello WebSockets!");&#125;;ws.onmessage = function(evt) &#123; console.log( "Received Message: " + evt.data); ws.close();&#125;;ws.onclose = function(evt) &#123; console.log("Connection closed.");&#125;; 客户端APIWebSocket 构造函数WebSocket 对象作为一个构造函数，用于新建 WebSocket 实例。1var ws = new WebSocket('ws://localhost:8080'); 执行上面语句之后，客户端就会与服务器进行连接。 webSocket.readyStatereadyState 属性返回实例对象的当前状态，共有四种。 CONNECTING：值为0，表示正在连接。 OPEN：值为1，表示连接成功，可以通信了。 CLOSING：值为2，表示连接正在关闭。 CLOSED：值为3，表示连接已经关闭，或者打开连接失败。 1234567891011121314151617switch (ws.readyState) &#123; case WebSocket.CONNECTING: // do something break; case WebSocket.OPEN: // do something break; case WebSocket.CLOSING: // do something break; case WebSocket.CLOSED: // do something break; default: // this never happens break;&#125; webSocket.onopen实例对象的onopen属性，用于指定连接成功后的回调函数。123ws.onopen = function () &#123; ws.send('Hello Server!');&#125; 如果要指定多个回调函数，可以使用addEventListener方法。123ws.addEventListener('open', function (event) &#123; ws.send('Hello Server!');&#125;); webSocket.onclose实例对象的onclose属性，用于指定连接关闭后的回调函数。12345678910111213ws.onclose = function(event) &#123; var code = event.code; var reason = event.reason; var wasClean = event.wasClean; // handle close event&#125;;ws.addEventListener("close", function(event) &#123; var code = event.code; var reason = event.reason; var wasClean = event.wasClean; // handle close event&#125;); webSocket.onmessage实例对象的onmessage属性，用于指定收到服务器数据后的回调函数。123456789ws.onmessage = function(event) &#123; var data = event.data; // 处理数据&#125;;ws.addEventListener("message", function(event) &#123; var data = event.data; // 处理数据&#125;); webSocket.send()实例对象的send()方法用于向服务器发送数据。1ws.send('your message'); webSocket.onerror1234567socket.onerror = function(event) &#123; // handle error event&#125;;socket.addEventListener("error", function(event) &#123; // handle error event&#125;);]]></content>
