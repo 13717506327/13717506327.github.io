@@ -77,27 +77,6 @@
     </url>
 
     <url>
-        <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/</loc>
-        <lastmod>2018-07-19T14:27:15.293Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/Generator/</loc>
-        <lastmod>2018-07-19T14:27:15.293Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/</loc>
-        <lastmod>2018-07-20T06:09:21.933Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/ES2017/</loc>
         <lastmod>2018-07-20T06:09:21.933Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -107,6 +86,27 @@
     <url>
         <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/ES2017/async/</loc>
         <lastmod>2018-07-20T06:09:21.933Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/</loc>
+        <lastmod>2018-07-20T06:16:19.666Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/</loc>
+        <lastmod>2018-07-20T06:16:19.666Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/categories/js%E5%8E%9F%E7%94%9F/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/Generator/</loc>
+        <lastmod>2018-07-20T06:16:19.666Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
