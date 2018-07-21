@@ -7,6 +7,38 @@
     </url>
 
     <url>
+        <loc>http://jsonlee.top/2018/07/20/Class/</loc>
+        <lastmod>2018-07-21T05:00:40.029Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/2018/07/18/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/</loc>
+        <lastmod>2018-07-20T13:26:06.529Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/2018/07/19/async/</loc>
+        <lastmod>2018-07-20T10:48:06.184Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/2018/07/18/Promise/</loc>
+        <lastmod>2018-07-20T10:47:37.143Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://jsonlee.top/2018/07/20/flex-%E5%B8%83%E5%B1%80/</loc>
         <lastmod>2018-07-20T10:37:57.936Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -39,32 +71,8 @@
     </url>
 
     <url>
-        <loc>http://jsonlee.top/2018/07/19/async/</loc>
-        <lastmod>2018-07-20T06:09:21.933Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://jsonlee.top/2018/07/18/Promise/</loc>
-        <lastmod>2018-07-19T10:54:13.076Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://jsonlee.top/2018/07/18/this-%E5%85%B3%E9%94%AE%E5%AD%97/</loc>
         <lastmod>2018-07-18T11:45:12.943Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://jsonlee.top/2018/07/18/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/</loc>
-        <lastmod>2018-07-18T11:21:45.500Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
