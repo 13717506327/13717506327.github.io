@@ -107,13 +107,6 @@
     </url>
 
     <url>
-        <loc>http://jsonlee.top/tags/css/</loc>
-        <lastmod>2018-07-20T10:37:57.936Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://jsonlee.top/tags/flex/</loc>
         <lastmod>2018-07-20T10:37:57.936Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -163,13 +156,6 @@
     </url>
 
     <url>
-        <loc>http://jsonlee.top/tags/js%E5%8E%9F%E7%94%9F/</loc>
-        <lastmod>2018-07-21T05:00:40.029Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://jsonlee.top/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/</loc>
         <lastmod>2018-07-21T05:00:40.029Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -184,8 +170,36 @@
     </url>
 
     <url>
+        <loc>http://jsonlee.top/tags/css/</loc>
+        <lastmod>2018-07-21T10:25:24.572Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/tags/%E5%B8%83%E5%B1%80%E6%8A%80%E5%B7%A7/</loc>
+        <lastmod>2018-07-21T10:25:24.572Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/tags/js%E5%8E%9F%E7%94%9F/</loc>
+        <lastmod>2018-07-22T15:16:53.966Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://jsonlee.top/tags/ES6/</loc>
-        <lastmod>2018-07-21T05:00:40.029Z</lastmod>
+        <lastmod>2018-07-22T15:16:53.966Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://jsonlee.top/tags/Symbol/</loc>
+        <lastmod>2018-07-22T15:16:53.966Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
