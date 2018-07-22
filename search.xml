@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[解构赋值]]></title>
+    <url>%2F2018%2F07%2F22%2F%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC%2F</url>
+    <content type="text"><![CDATA[ES6 允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。 数组的解构赋值1let [a, b, c] = [1, 2, 3]; 本质上，这种写法属于“模式匹配”，只要等号两边的模式相同，左边的变量就会被赋予对应的值。下面是一些使用嵌套数组进行解构的例子。1234567891011121314151617181920let [foo, [[bar], baz]] = [1, [[2], 3]];foo // 1bar // 2baz // 3let [ , , third] = ["foo", "bar", "baz"];third // "baz"let [x, , y] = [1, 2, 3];x // 1y // 3let [head, ...tail] = [1, 2, 3, 4];head // 1tail // [2, 3, 4]let [x, y, ...z] = ['a'];x // "a"y // undefinedz // [] 如果解构不成功，变量的值就等于 undefined。 数组的不完全解构即等号左边的模式，只匹配一部分的等号右边的数组。这种情况下，解构依然可以成功。12345678let [x, y] = [1, 2, 3];x // 1y // 2let [a, [b], d] = [1, [2, 3], 4];a // 1b // 2d // 4 指定默认值解构赋值允许指定默认值。12345let [foo = true] = [];foo // truelet [x, y = 'b'] = ['a']; // x='a', y='b'let [x, y = 'b'] = ['a', undefined]; // x='a', y='b' 注意，ES6 内部使用严格相等运算符（===），判断一个位置是否有值。所以，只有当一个数组成员严格等于undefined，默认值才会生效。12345let [x = 1] = [undefined];x // 1let [x = 1] = [null];x // null 对象的解构赋值]]></content>
+      <categories>
+        <category>js原生</category>
+        <category>ES6</category>
+        <category>解构赋值</category>
+      </categories>
+      <tags>
+        <tag>js原生</tag>
+        <tag>ES6</tag>
+        <tag>解构赋值</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Symbol]]></title>
     <url>%2F2018%2F07%2F22%2FSymbol%2F</url>
     <content type="text"><![CDATA[ES5 的对象属性名都是字符串，这容易造成属性名的冲突。比如，你使用了一个他人提供的对象，但又想为这个对象添加新的方法（mixin 模式），新方法的名字就有可能与现有方法产生冲突。如果有一种机制，保证每个属性的名字都是独一无二的就好了，这样就从根本上防止属性名的冲突。这就是 ES6 引入Symbol的原因。 ES6 引入了一种新的原始数据类型Symbol，表示独一无二的值。它是 JavaScript 语言的第七种数据类型，前六种是：undefined、null、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）;凡是属性名属于 Symbol 类型，就都是独一无二的，可以保证不会与其他属性名产生冲突。 用法：12let s = Symbol();typeof s // "symbol" 注意，Symbol 函数前不能使用 new 命令，否则会报错。这是因为生成的 Symbol 是一个原始类型的值，不是对象。 Symbol 函数可以接受一个字符串作为参数，表示对 Symbol 实例的描述，主要是为了在控制台显示，或者转为字符串时，比较容易区分。1234567let s1 = Symbol('foo');let s2 = Symbol('bar');s1 // Symbol(foo)s2 // Symbol(bar)s1.toString() // "Symbol(foo)"s2.toString() // "Symbol(bar)" 如果 Symbol 的参数是一个对象，就会调用该对象的 toString 方法，将其转为字符串，然后才生成一个 Symbol 值。123456789Symbol(&#123;&#125;) // Symbol([object Object])const obj = &#123; toString() &#123; return 'abc'; &#125;&#125;;const sym = Symbol(obj);sym // Symbol(abc) 注意，Symbol 函数的参数只是表示对当前 Symbol 值的描述，因此相同参数的Symbol函数的返回值是不相等的。 Symbol 值不能与其他类型的值进行运算，会报错。123456let sym = Symbol('My symbol');"your symbol is " + sym// TypeError: can't convert symbol to string`your symbol is $&#123;sym&#125;`// TypeError: can't convert symbol to string 但是，Symbol 值可以显式转为字符串。1234let sym = Symbol('My symbol');String(sym) // 'Symbol(My symbol)'sym.toString() // 'Symbol(My symbol)' 作为属性名的 Symbol1234567891011121314151617let mySymbol = Symbol();// 第一种写法let a = &#123;&#125;;a[mySymbol] = 'Hello!';// 第二种写法let a = &#123; [mySymbol]: 'Hello!'&#125;;// 第三种写法let a = &#123;&#125;;Object.defineProperty(a, mySymbol, &#123; value: 'Hello!' &#125;);// 以上写法都得到同样结果a[mySymbol] // "Hello!" 注意，Symbol 值作为对象属性名时，不能用点运算符。 Symbol 类型还可以用于定义一组常量，保证这组常量的值都是不相等的。123456789const log = &#123;&#125;;log.levels = &#123; DEBUG: Symbol('debug'), INFO: Symbol('info'), WARN: Symbol('warn')&#125;;console.log(log.levels.DEBUG, 'debug message');console.log(log.levels.INFO, 'info message'); 属性名的遍历Symbol 作为属性名，该属性不会出现在for...in、for...of循环中，也不会被Object.keys()、Object.getOwnPropertyNames()、JSON.stringify()返回。但是，它也不是私有属性，有一个Object.getOwnPropertySymbols方法，可以获取指定对象的所有 Symbol 属性名。 另一个新的 API，Reflect.ownKeys方法可以返回所有类型的键名，包括常规键名和 Symbol 键名。 由于以 Symbol 值作为名称的属性，不会被常规方法遍历得到。我们可以利用这个特性，为对象定义一些非私有的、但又希望只用于内部的方法。1234567891011121314151617181920212223242526let size = Symbol('size');class Collection &#123; constructor() &#123; this[size] = 0; &#125; add(item) &#123; this[this[size]] = item; this[size]++; &#125; static sizeOf(instance) &#123; return instance[size]; &#125;&#125;let x = new Collection();Collection.sizeOf(x) // 0x.add('foo');Collection.sizeOf(x) // 1Object.keys(x) // ['0']Object.getOwnPropertyNames(x) // ['0']Object.getOwnPropertySymbols(x) // [Symbol(size)]]]></content>
