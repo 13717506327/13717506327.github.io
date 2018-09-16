@@ -84,18 +84,18 @@
 
 
 
-<meta name="description" content="git 初始化git">
+<meta name="description" content="git 初始化1git init 将本地文件推送到远端12345git initgit add .git commit -m &amp;quot;first commit&amp;quot;git remote add origin git@github.com:13717506327/git_test.git // 配置远端库地址git push -u origin master // 第一次推送加参数 -u">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git">
 <meta property="og:url" content="http://jsonlee.top/2018/09/16/git/index.html">
 <meta property="og:site_name" content="json`s blog">
-<meta property="og:description" content="git 初始化git">
+<meta property="og:description" content="git 初始化1git init 将本地文件推送到远端12345git initgit add .git commit -m &amp;quot;first commit&amp;quot;git remote add origin git@github.com:13717506327/git_test.git // 配置远端库地址git push -u origin master // 第一次推送加参数 -u">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-16T12:02:44.266Z">
+<meta property="og:updated_time" content="2018-09-16T14:15:20.657Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git">
-<meta name="twitter:description" content="git 初始化git">
+<meta name="twitter:description" content="git 初始化1git init 将本地文件推送到远端12345git initgit add .git commit -m &amp;quot;first commit&amp;quot;git remote add origin git@github.com:13717506327/git_test.git // 配置远端库地址git push -u origin master // 第一次推送加参数 -u">
 
 
 
@@ -347,7 +347,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-16T20:02:44+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-16T22:15:20+08:00">
                 2018-09-16
               </time>
             
@@ -378,7 +378,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  5 字
+                  420 字
                 </span>
               
 
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  2 分钟
                 </span>
               
             </div>
@@ -415,7 +415,14 @@
       
 
       
-        <h3 id="git-初始化"><a href="#git-初始化" class="headerlink" title="git 初始化"></a>git 初始化</h3><p>git </p>
+        <h3 id="git-初始化"><a href="#git-初始化" class="headerlink" title="git 初始化"></a>git 初始化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+<h3 id="将本地文件推送到远端"><a href="#将本地文件推送到远端" class="headerlink" title="将本地文件推送到远端"></a>将本地文件推送到远端</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git remote add origin git@github.com:13717506327/git_test.git // 配置远端库地址</span><br><span class="line">git push -u origin master // 第一次推送加参数 -u</span><br></pre></td></tr></table></figure>
+<h3 id="将本地库文件推送到远端"><a href="#将本地库文件推送到远端" class="headerlink" title="将本地库文件推送到远端"></a>将本地库文件推送到远端</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:13717506327/git_test.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<h3 id="远端库同步"><a href="#远端库同步" class="headerlink" title="远端库同步"></a>远端库同步</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git remote -v // 列出远端库的详细情况</span><br><span class="line">git pull [origin] [branch名] //  取回远程仓库的变化，并与本地分支合并,</span><br><span class="line">//格式：git pull  &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</span><br><span class="line">git fetch [origin] // 下载远程仓库的所有变动</span><br><span class="line">git push [origin] [branch名] // 上传本地指定分支到远程仓库</span><br></pre></td></tr></table></figure>
+<h3 id="查看信息"><a href="#查看信息" class="headerlink" title="查看信息"></a>查看信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git status // 查看文件状态变更</span><br><span class="line">git log -5 --pretty --oneline // 显示 最近 5 次 的commit 记录, 并以 简写形式展示</span><br></pre></td></tr></table></figure>
+<h3 id="git-stash-暂存"><a href="#git-stash-暂存" class="headerlink" title="git stash 暂存"></a>git stash 暂存</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 暂时将未提交的变化移除，稍后再移入</span><br><span class="line"> git stash // 保存工作现场</span><br><span class="line"> git stash pop // 回到工作现场</span><br></pre></td></tr></table></figure>
+<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b dev  // 创建 分支 并切换</span><br><span class="line">// 相当于 git branch dev 然后 git checkout dev </span><br><span class="line">git branch // 查看当前分支</span><br><span class="line">git branch -r // 查看远端分支</span><br><span class="line">git branch -a // 查看本地和远端的所有分支</span><br><span class="line">git branch 分支名 // 创建分支</span><br><span class="line">git checkout 分支名 // 切换分支</span><br><span class="line">git branch -d // 删除本地分支</span><br><span class="line">git push origin -d BranchName  // 删除远端分支</span><br><span class="line">git merge // 合并到当前分支</span><br><span class="line">git merge master // 合并主干代码到当前分支</span><br><span class="line">git push –all // 将本地的所有分支都推送到远端</span><br></pre></td></tr></table></figure>
+<p><strong>注：git pull = git fetch + git merge</strong></p>
 
       
     </div>
@@ -624,7 +631,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-初始化"><span class="nav-text">git 初始化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-初始化"><span class="nav-text">git 初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将本地文件推送到远端"><span class="nav-text">将本地文件推送到远端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将本地库文件推送到远端"><span class="nav-text">将本地库文件推送到远端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远端库同步"><span class="nav-text">远端库同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看信息"><span class="nav-text">查看信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-stash-暂存"><span class="nav-text">git stash 暂存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支管理"><span class="nav-text">分支管理</span></a></li></ol></div>
             
 
           </div>
@@ -659,7 +666,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">35.7k</span>
+    <span title="Site words total count">36.1k</span>
   
 </div>
 <div class="powered-by">
